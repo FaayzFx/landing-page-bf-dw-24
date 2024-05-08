@@ -327,6 +327,14 @@ main, section {
     gap: 25px 0;
 }
 
+.case-promo {
+    cursor: pointer;
+  }
+
+.case-promo.parallax {
+    transition: .5s ease;
+}
+
 .case-promo-content {
     max-height: 580px;
     display: flex;
@@ -536,7 +544,7 @@ main, section {
 }
 
 .conditions-box {
-    height: 420px;
+    height: 360px;
     width: 200px;
     display: flex;
     flex-direction: column;
@@ -558,7 +566,7 @@ main, section {
 }
 
 .conditions-box-info .paragraph-1 {
-    font-size: 1.25rem;
+    font-size: 1rem;
     text-transform: uppercase;
 }
 
@@ -573,5 +581,5 @@ main, section {
 
 .conditions-icon {
     width: auto;
-    height: 120px;
+    height: 90px;
 }
