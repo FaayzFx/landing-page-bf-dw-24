@@ -30,9 +30,10 @@
 }
 
 body {
-    background-image: url(/img/bg/lp-bg.png);
+    background-color: var(--cor-primaria);
+    /* background-image: url(/img/bg/lp-bg.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     z-index: -1;
 }
 
@@ -403,22 +404,19 @@ main, section {
 
 .slider-cont {
     position: relative;
-    left: 0;
-    bottom: 0;
+    width: 100%;
+    height: 300px; /* Added a fixed height */
     overflow: hidden;
     display: flex;
     flex-wrap: nowrap;
-}
-
-.slider-box {
-    z-index: -1;
+    justify-content: center; /* Center the slider horizontally */
+  }
+  
+  .slider-box {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.2);
-    backdrop-filter: blur(.5rem);
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(0.5rem);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -429,14 +427,28 @@ main, section {
     gap: 0 50px;
     transition: transform 0.5s ease;
     opacity: 0.5;
-    transform: scale(0.8) translateX(0);
-}
-
-.slider-box.active {
+  }
+  
+  .slider-box.active {
     z-index: 1;
     opacity: 1;
-    transform: scale(1) translateX(0);
-}
+    transform: translate(0);
+  }
+  
+  .slider-box-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .slider-box-arrow.prev {
+    left: 20px;
+  }
+  
+  .slider-box-arrow.next {
+    right: 20px;
+  }
 
 .slider-box-content {
     flex: 1;
