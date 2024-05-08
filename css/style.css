@@ -435,9 +435,11 @@ main, section {
     scale: 0.8;
     transition: 0.5s ease;
     opacity: 0.5;
+    filter: blur(.2rem);
   }
   
   .slider-box.active {
+    filter: blur(0);
     scale: 1;
     z-index: 1;
     opacity: 1;
@@ -506,13 +508,6 @@ main, section {
 
 
 
-/* Slider Config */
-
-
-
-
-
-
 /* Condições */
 
 
@@ -569,10 +564,11 @@ main, section {
 
 .conditions-link {
     text-align: center;
-    text-decoration: underline;
+    text-decoration: underline 1.5px;
+    text-underline-offset: 0.2em;
     color: var(--cor-terciaria);
     font-family: var(--fonte-paragraph);
-    font-size: 1rem;
+    font-size: 1.15rem;
 }
 
 .conditions-icon {
