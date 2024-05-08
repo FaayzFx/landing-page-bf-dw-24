@@ -316,6 +316,44 @@
         </ul>
     </section>
 
+    <section class="tips">
+        <h1 class="heading-1">COMO PREPARAR A MINHA<br><strong class="heading-highlight">BLACK FRIDAY?</strong></h1>
+        <p class="paragraph">Quer fazer uma boa campanha?<br>Aqui vai algumas dicas para você, lojista!</p>
+        <ul class="tips-cont">
+            <li class="tips-box">
+                <img src="/img/renders/banner-home-render-01.png" class="render-05" alt="Render 05">
+                <h3 class="heading-2">Defina os descontos dos produtos</h3>
+                <p class="paragraph-1">Você pode conceder reduções de preços mais conservadoras e aproveitar para instigar os clientes para promoções do fim de novembro.</p>
+            </li>
+            <li class="tips-box">
+                <img src="/img/renders/banner-home-render-01.png" class="render-05" alt="Render 05">
+                <h3 class="heading-2">Defina os descontos dos produtos</h3>
+                <p class="paragraph-1">Você pode conceder reduções de preços mais conservadoras e aproveitar para instigar os clientes para promoções do fim de novembro.</p>
+            </li>
+            <li class="tips-box">
+                <img src="/img/renders/banner-home-render-01.png" class="render-05" alt="Render 05">
+                <h3 class="heading-2">Defina os descontos dos produtos</h3>
+                <p class="paragraph-1">Você pode conceder reduções de preços mais conservadoras e aproveitar para instigar os clientes para promoções do fim de novembro.</p>
+            </li>
+            <li class="tips-box">
+                <img src="/img/renders/banner-home-render-01.png" class="render-05" alt="Render 05">
+                <h3 class="heading-2">Defina os descontos dos produtos</h3>
+                <p class="paragraph-1">Você pode conceder reduções de preços mais conservadoras e aproveitar para instigar os clientes para promoções do fim de novembro.</p>
+            </li>
+            <li class="tips-box">
+                <img src="/img/renders/banner-home-render-01.png" class="render-05" alt="Render 05">
+                <h3 class="heading-2">Defina os descontos dos produtos</h3>
+                <p class="paragraph-1">Você pode conceder reduções de preços mais conservadoras e aproveitar para instigar os clientes para promoções do fim de novembro.</p>
+            </li>
+            <li class="tips-box">
+                <img src="/img/renders/banner-home-render-01.png" class="render-05" alt="Render 05">
+                <h3 class="heading-2">Defina os descontos dos produtos</h3>
+                <p class="paragraph-1">Você pode conceder reduções de preços mais conservadoras e aproveitar para instigar os clientes para promoções do fim de novembro.</p>
+            </li>
+        </ul>
+
+    </section>
+
     <div id="final"></div>
 
     <script>
@@ -405,56 +443,56 @@
 
     <script>
 
-(function() {
-  // Get all elements with the class "parallax"
-  const elems = document.querySelectorAll(".parallax");
+        (function() {
+        // Get all elements with the class "parallax"
+        const elems = document.querySelectorAll(".parallax");
 
-  // Add event listener
-  document.addEventListener("mousemove", parallax);
+        // Add event listener
+        document.addEventListener("mousemove", parallax);
 
-  // Define the perspective value and rotation speed
-  const perspective = 750;
-  const rotationSpeed = 0.05;
+        // Define the perspective value and rotation speed
+        const perspective = 750;
+        const rotationSpeed = 0.05;
 
-  // Magic happens here
-  function parallax(e) {
-    elems.forEach((elem) => {
-      const _w = elem.offsetWidth / 2;
-      const _h = elem.offsetHeight / 2;
-      const _mouseX = e.clientX;
-      const _mouseY = e.clientY;
-      const elemRect = elem.getBoundingClientRect(); // Get the element's bounding rectangle
-      const isHovering = (_mouseX >= elemRect.left && _mouseX <= elemRect.right && _mouseY >= elemRect.top && _mouseY <= elemRect.bottom); // Check if the cursor is hovering over the element
+        // Magic happens here
+        function parallax(e) {
+            elems.forEach((elem) => {
+            const _w = elem.offsetWidth / 2;
+            const _h = elem.offsetHeight / 2;
+            const _mouseX = e.clientX;
+            const _mouseY = e.clientY;
+            const elemRect = elem.getBoundingClientRect(); // Get the element's bounding rectangle
+            const isHovering = (_mouseX >= elemRect.left && _mouseX <= elemRect.right && _mouseY >= elemRect.top && _mouseY <= elemRect.bottom); // Check if the cursor is hovering over the element
 
-      if (isHovering) {
-        const rotateX = `rotateX(${(-(_mouseY - elemRect.top) / elemRect.height + 0.5) * rotationSpeed * 180}deg)`; // Rotate X axis based on cursor position relative to the element (inverted)
-        const rotateY = `rotateY(${((_mouseX - elemRect.left) / elemRect.width - 0.5) * rotationSpeed * 180}deg)`; // Rotate Y axis based on cursor position relative to the element
-        const transform = `perspective(${perspective}px) ${rotateX} ${rotateY}`;
-        elem.style.transform = transform;
-      } else {
-        elem.style.transform = ""; // Reset transform when not hovering
-      }
-    });
-  }
-})();
+            if (isHovering) {
+                const rotateX = `rotateX(${(-(_mouseY - elemRect.top) / elemRect.height + 0.5) * rotationSpeed * 180}deg)`; // Rotate X axis based on cursor position relative to the element (inverted)
+                const rotateY = `rotateY(${((_mouseX - elemRect.left) / elemRect.width - 0.5) * rotationSpeed * 180}deg)`; // Rotate Y axis based on cursor position relative to the element
+                const transform = `perspective(${perspective}px) ${rotateX} ${rotateY}`;
+                elem.style.transform = transform;
+            } else {
+                elem.style.transform = ""; // Reset transform when not hovering
+            }
+            });
+        }
+        })();
 
 
-// Get the.case-promo element
-const promoElement = document.querySelector(".case-promo");
+        // Get the.case-promo element
+        const promoElement = document.querySelector(".case-promo,.tips-box");
 
-// Add click event listener to the.case-promo element
-promoElement.addEventListener("click", function(event) {
-  // Stop the event from propagating to the child elements
-  event.stopPropagation();
+        // Add click event listener to the.case-promo element
+        promoElement.addEventListener("click", function(event) {
+        // Stop the event from propagating to the child elements
+        event.stopPropagation();
 
-  // Get the link URL from the data-link attribute
-  const linkUrl = promoElement.getAttribute("data-link");
+        // Get the link URL from the data-link attribute
+        const linkUrl = promoElement.getAttribute("data-link");
 
-  // Redirect the user to the link URL
-  if (linkUrl) {
-    window.location.href = linkUrl;
-  }
-});
+        // Redirect the user to the link URL
+        if (linkUrl) {
+            window.location.href = linkUrl;
+        }
+        });
 
     </script>
 
