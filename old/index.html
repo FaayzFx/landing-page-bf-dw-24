@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+      @import url(https://db.onlinewebfonts.com/c/29800a9e7d146302b8ed9ad2f848db63?family=Druk+Wide+Web+Bold+Regular);
+      
+    :root {
+        --cor-primaria: #000000;
+        --cor-secundaria: #ff7300;
+        --cor-terciaria:#fff;
+        --fonte-titulo: 'Druk Wide Web Bold Regular', sans-serif;
+        --fonte-paragrafo: 'Outfit', sans-serif;
+
+    }
+
+    * {
+      font-family: 'Outfit, Druk Wide Web Bold Regular', sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      box-sizing: border-box;
+      background-color: var(--cor-primaria);
+      font-family: var(--fonte-paragrafo);
+      color: var(--cor-terciaria);
+      font-size: 15px;
+    }
+    ::-webkit-scrollbar {
+      background: var(--cor-primaria);
+      opacity: 0.2;
+      width: 5px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--cor-secundaria);
+      border-radius: 20px;
+      opacity: 0.8;
+    }
+    .nav-a {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      background-image: url(https://www.danielatacado.com.br/media/wysiwyg/background.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 640px;
+    }
+    .case-timer {
+      width: 70%;
+      border: solid var(--cor-terciaria);
+      background-color: var(--cor-primaria);
+      text-align: center;
+      color: var(--cor-secundaria);
+      padding: 5px 0;
+    }
+    .timer {
+      display: flex;
+      width: 50%;
+      margin: 5px auto;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 35px;
+      font-weight: 900;
+    }
+    .tempo p:last-child {
+      font-size: 15px;
+      font-weight: 100;
+    }
+    .cont-anchor {
+      width: 100%;
+      border-top: var(--cor-terciaria) solid;
+      border-bottom: var(--cor-terciaria) solid;
+    }
+    .cont-anchor ul {
+      width: 70%;
+      display: flex;
+      justify-content: space-around;
+      margin: 2px auto;
+      list-style: none;
+    }
+    .cont-anchor ul li {
+      padding: 3px;
+      margin: 0 !important;
+    }
+    .cont-anchor ul li a {
+      font-size: 15px;
+      color: var(--cor-terciaria);
+      text-decoration: none;
+    }
+    .title-a {
+      font-size: 40px;
+      font-weight: 900;
+      color: var(--cor-terciaria);
+      font-family: var(--fonte-titulo);
+      text-align: center;
+      margin: 30px 0;
+      letter-spacing: 1px;
+    }
+    .title-b {
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--cor-secundaria);
+      font-family: var(--fonte-titulo);
+      text-align: center;
+      margin: 30px 0;
+      letter-spacing: 1px;
+    }
+    .cont-info {
+      width: 70%;
+      margin: 0 auto;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+    .title-info {
+      font-family: var(--fonte-titulo);
+      color: var(--cor-secundaria);
+      font-size: 25px;
+      font-weight: 600;
+      text-align: center;
+    }
+    .title-info {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .cont-passado,
+    .cont-ben {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--cor-secundaria);
+      margin: 30px 0;
+      padding: 30px 0;
+    }
+    .cont-passado p,
+    .cont-ben p {
+      font-size: 15px;
+      margin: 2px 0 5px;
+    }
+    .title-passado,
+    .title-ben {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--cor-terciaria);
+      font-family: var(--fonte-titulo);
+      text-align: center;
+      margin: 30px 0;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+    .case-passado,
+    .case-ben {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .case-passado img {
+      border-radius: 20px;
+      width: 232px;
+    }
+    .case-ben img {
+      border-radius: 20px;
+      width: 257px;
+    }
+    .txt-a {
+      font-size: 17px;
+      text-align: start;
+      width: 70%;
+      margin: 0 auto 30px;
+      letter-spacing: 1px;
+    }
+    .cont-promo {
+      width: 70%;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .case-promo {
+      width: 48%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .img-promo {
+      width: 70%;
+    }
+    .img-promo img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .btn-promo {
+      background-color: var(--cor-terciaria);
+      color: var(--cor-primaria) !important;
+      margin-top: -20px;
+      position: relative;
+      text-align: center;
+      padding: 3px 0;
+      border-radius: 0 0 10px 10px;
+      text-decoration: none;
+      opacity: 0;
+      width: 70%;
+      transition: 0.4s;
+      font-weight: 800;
+    }
+    .img-promo:hover + .btn-promo {
+      opacity: 1;
+    }
+    .case-promo h5 {
+      font-size: 33px;
+      margin: 7px 0 3px;
+      font-family: var(--fonte-titulo);
+    }
+    .txt-promo {
+      font-size: 12px;
+      margin: 7px 0 3px;
+      width: 70%;
+      margin: 0 auto;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    .clubes {
+      width: 70%;
+      margin: 30px auto;
+    }
+    .clubes a img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .cont-blog {
+      width: 60%;
+      height: 230px;
+      margin: 50px auto;
+      display: flex;
+      justify-content: center;
+    }
+    .img-blog {
+      width: 30%;
+      opacity: 0.3;
+      transition: transform 0.4s ease-in-out;
+      position: absolute;
+      max-width: 200px;
+    }
+    .img-blog img {
+      border-radius: 10px;
+      width: 100%;
+    }
+    .slider-motor {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      transition: 0.4s;
+    }
+    .slider-motor a {
+      text-decoration: none;
+    }
+    .title-blog {
+      background-color: var(--cor-terciaria);
+      padding: 3px 0;
+      text-align: center;
+      color: var(--cor-primaria);
+      font-weight: 600;
+      border-radius: 0 0 10px 10px;
+      margin-top: -10px;
+      position: relative;
+      z-index: 10;
+    }
+    .title-blog p {
+      text-decoration: none;
+    }
+    .btn {
+      position: absolute;
+      z-index: 100;
+    }
+    #prev {
+      left: 80px;
+    }
+    #next {
+      right: 80px;
+    }
+    .pos2 {
+      transform: scale(1.3);
+      z-index: 10;
+      opacity: 1;
+    }
+    .pos1 {
+      transform: translateX(-100%);
+    }
+    .pos3 {
+      transform: translateX(100%);
+    }
+    .pos4 {
+      transform: translateX(0%);
+      z-index: 1;
+      opacity: 0;
+    }
+    .btn-slider-blog {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 100;
+      cursor: pointer;
+      top: 60px;
+      transition: 0.2s;
+    }
+    .btn-slider-blog img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+    .btn-slider-blog:active {
+      transform: scale(0.9);
+    }
+    .cont-produtos {
+      width: 70%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .produto {
+      width: 30%;
+      background-color: var(--cor-terciaria);
+      border-radius: 10px;
+      margin-bottom: 30px;
+      font-size: 30px;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--cor-primaria) !important;
+      font-family: var(--fonte-titulo);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3px 3px 3px 10px;
+    }
+    .produto img {
+      width: 30px;
+      vertical-align: middle;
+    }
+    .produto:hover {
+      background-color: var(--cor-secundaria);
+      color: var(--cor-secundaria);
+    }
+    path {
+      transition: 0.4s;
+    }
+    .inactive {
+      transition: 0.4s;
+      transform: rotate(180deg);
+    }
+    .active {
+      transition: 0.4s;
+      transform: rotate(00deg);
+    }
+    .cont-pergunta {
+      width: 70%;
+      margin: 0 auto;
+      margin-bottom: 100px;
+    }
+    .pergunta {
+      width: 100%;
+      background-color: var(--cor-secundaria);
+      display: flex;
+      justify-content: space-between;
+      font-size: 25px;
+      padding: 5px;
+      font-family: var(--fonte-titulo);
+      color: var(--cor-primaria);
+      align-items: center;
+      border-bottom: var(--cor-primaria) solid;
+      max-height: 60px;
+      cursor: pointer;
+    }
+    .pergunta svg {
+      width: 35px;
+    }
+    .pergunta:first-child {
+      border-radius: 30px 30px 0 0;
+    }
+    .pergunta:last-child {
+      border-radius: 0 0 30px 30px;
+    }
+    .resposta {
+      background-color: var(--cor-terciaria);
+      width: 100%;
+      padding: 0px;
+      transform: scaleY(0);
+      transition: 0.3s;
+      max-height: 0px;
+      word-break: break-word;
+    }
+    .resposta-active {
+      padding: 5px;
+      transform: scaleY(1);
+      max-height: none;
+    }
+    .resposta p {
+      font-size: 14px;
+      padding: 20px;
+      color: var(--cor-primaria);
+    }
+    p {
+      margin: 0;
+    }
+    @media only screen and (max-width: 600px) {
+      body {
+        overflow-x: hidden;
+      }
+      .nav-a {
+        height: 370px;
+        background-image: url(https://www.danielatacado.com.br/media/wysiwyg/background_mobile.jpg);
+      }
+      .case-timer {
+        width: 80%;
+      }
+      .timer {
+        font-size: 20px;
+        width: 70%;
+      }
+      .tempo p:last-child {
+        font-size: 10px;
+      }
+      .cont-anchor {
+        display: none;
+      }
+      .case-passado,
+      .case-ben {
+        overflow-x: scroll;
+      }
+      .case-passado::-webkit-scrollbar,
+      .case-ben::-webkit-scrollbar {
+        display: none;
+      }
+      .case-passado img,
+      .case-ben img {
+        min-width: 250px;
+        margin: 0 5px;
+      }
+      .cont-passado p {
+        text-align: center;
+      }
+      .cont-promo,
+      .clubes,
+      .cont-produtos {
+        width: 100%;
+      }
+      .clubes,
+      .cont-produtos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .case-promo {
+        width: 100%;
+      }
+      .txt-a {
+        font-size: 13px;
+      }
+      .clubes a {
+        width: 80%;
+      }
+      .btn-slider-blog {
+        top: 30px;
+      }
+      #prev {
+        left: -90px;
+      }
+      #next {
+        right: -90px;
+      }
+      .title-blog {
+        font-size: 10px;
+      }
+      .produto {
+        width: 90%;
+      }
+      .pergunta {
+        font-size: 15px;
+      }
+    }
+
+    .case-promo {
+  opacity: 0;
+  position: relative;
+  left: -100px;
+  transition: opacity 1s, left 1s;
+}
+
+.case-promo.fade-in-move {
+  opacity: 1;
+  left: 0;
+}
+
+.case-promo.fade-out {
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.title-a {
+  padding: 30px 0 8px;
+  position: relative;
+}
+
+.title-a.before {
+  content: "";
+  position: absolute;
+  left: 7%;
+  bottom: 16px;
+  width: 150px;
+  height: 14px;
+  transform: skew(-12deg) translateX(-50%);
+  background: rgba(255, 8, 0, 0.5);
+  z-index: -1;
+}
+
+    </style>
+
+<div class="nav-a">
+    <!--<div class="case-timer">
+        <p style="font-size: 15px; font-weight: 600;">Começa em:</p>
+            <div class="timer">
+                <div class="tempo">
+                    <p id="dias">269</p>
+                    <p>Dias</p>
+                </div>
+                    <p>:</p>
+                <div class="tempo">
+                    <p id="horas">11</p>
+                    <p>Horas</p>
+                </div>
+                    <p>:</p>
+                <div class="tempo">
+                    <p id="minutos">13</p>
+                    <p>Minutos</p>
+                </div>
+                    <p>:</p>
+                <div class="tempo">
+                    <p id="segundos">37</p>
+                    <p>Segundos</p>
+                </div>
+            </div>
+        </div>-->
+</div>
+
+<!--<div class="cont-anchor">
+    <ul>
+        <li><a href="#oqeBl">O que é Black Friday?</a></li>
+            <li>|</li>
+        <li><a href="#passado">Retrospectiva</a></li>
+            <li>|</li>
+        <li><a href="#promo">Promoções Especiais </a></li>
+            <li>|</li>
+        <li><a href="#ben">O que terá na Black 2024?</a></li>
+            <li>|</li>
+        <li><a href="#blog">Nosso blog</a></li>
+    </ul>
+</div>-->
+
+<p class="title-a">Black November 2024</p>
+
+<div class="cont-info">
+    <!--<p id="oqeBl" class="title-info">O que é a Black Friday</p>-->
+    <p>Se você é um revendedor em busca das melhores margens, a Distribuidora Wilson tem ofertas exclusivas para você. Aproveite descontos especiais e proporcione aos seus clientes a moda mais atualizada e preços irresistíveis.</p>
+
+    <br>
+
+    <!--<p class="title-info">Como funciona a Black November na Daniel Calçados?</p>-->
+
+    <p>Esteja pronto para se surpreender com ofertas que vão além do esperado. A Distribuidora Wilson está comprometida em proporcionar descontos exclusivos em uma ampla gama de produtos, desde calçados abertos até os fechados, entre eles as melhores marcas renomadas!</p>
+
+    <br>
+
+    <p>A Black Friday tem se tornado algo comum no Brasil. No início, não havia muitas lojas que aderiam a essa ação em seu plano comercial. No entanto, com o passar dos anos, as pessoas se tornaram mais receptivas a essa ideia! Hoje, tornou-se uma data significativa para lojistas de todos os nichos. Afinal, quem não gosta de uma promoção, não é mesmo?</p>
+</div>
+
+<!--<div id="passado" class="cont-passado">
+    <h3 class="title-passado">Ofertas por tempo limitado!</h3>
+        <p>Black November - Daniel Atacado: Promoções imbatíveis; Até 170% de lucro; Parcelamentos diferenciados.</p>
+        
+        <div class="case-passado">
+            <img src="https://www.danielatacado.com.br/media/wysiwyg/imbativeis.jpg" alt="">
+            <img src="https://www.danielatacado.com.br/media/wysiwyg/Black_friday-02.jpg" alt="">
+            <img src="https://www.danielatacado.com.br/media/wysiwyg/parcelamento.jpg" alt="">
+            <img src="https://www.danielatacado.com.br/media/wysiwyg/cashback.jpg" alt="">
+        </div>
+</div>-->
+
+<p id="promo" class="title-a">Ofertas por tempo limitado!</p>
+
+<p class="txt-a">Só na Daniel Calçados você encontra lançamentos Grendene com preços competitivos e que são capazes de aumentar a sua margem de lucro de forma significativa. Aproveite para abastecer seu estoque com nossos produtos de preço e qualidade únicos.</p>
+
+<div class="cont-promo">
+<!-- Ipanema -->
+    <div class="case-promo">
+        <div class="img-promo"><a href="https://www.danielatacado.com.br/marcas/ipanema-atacado.html" target="_blank" rel="noopener"> <img src="https://www.danielatacado.com.br/media/wysiwyg/ipanema_1.jpg" alt=""></a>
+        </div>
+        <p>Ver novidades</p>
+        <h5>Recomendações</h5>
+        <p class="txt-promo">Sofisticada, descontraída e charmosa. Os chinelos e sandálias da Ipanema combinam moda e conforto, capturando a essência vibrante da cultura brasileira em uma ampla gama de modelos e preços. Os modelos Ipanema são ideais para quem busca momentos únicos!</p>
+    </div>
+<!-- Rider -->
+    <div class="case-promo">
+        <div class="img-promo"><a href="https://www.danielatacado.com.br/marcas/rider-atacado.html" target="_blank" rel="noopener"> <img src="https://www.danielatacado.com.br/media/wysiwyg/rider.jpg" alt=""></a>
+        </div>
+        <p>Ver novidades</p>
+        <h5>Tênis & Botas</h5>
+        <p class="txt-promo">Inovação, autenticidade e liberdade. A Rider oferece estilo arrojado e conforto duradouro em seus modelos, projetados para acompanhar seus clientes em todas jornadas e permitir que eles estejam confortáveis. O modelo perfeito para quem curte estilos esportivos e radicais.</p>
+    </div>
+<!-- Cartago -->
+    <div class="case-promo">
+        <div class="img-promo"><a href="https://www.danielatacado.com.br/marcas/cartago-atacado.html" target="_blank" rel="noopener"> <img src="https://www.danielatacado.com.br/media/wysiwyg/cartago_1.jpg" alt=""> </a></div>
+        <p>Ver novidades</p>
+        <h5>Havaianas</h5>
+        <p class="txt-promo">Elegância, conforto e praticidade. Os modelos Cartago unem estilo com bem-estar, refletindo a busca pela excelência que a marca tem. Explore a harmonia entre moda e conforto e encante os clientes que não abrem mão de modelos clássicos, charmosos e confortáveis.</p>
+    </div>
+<!-- Zaxy -->
+    <div class="case-promo">
+        <div class="img-promo"><a href="https://www.danielatacado.com.br/marcas/zaxy-atacado.html" target="_blank" rel="noopener"> <img src="https://www.danielatacado.com.br/media/wysiwyg/zaxy_2.jpg" alt=""> </a></div>
+        <p>Ver novidades</p>
+        <h5>Infantil</h5>
+        <p class="txt-promo">Explore a energia contagiante da Zaxy, onde a moda encontra a diversão em cada modelo. A Zaxy é sinônimo de vivacidade e estilo, oferecendo opções irresistíveis que refletem a personalidade única de quem usá-la. Ideal para quem prezam por autenticidade, quando montam os looks.</p>
+    </div>
+<!-- Mormaii -->
+    <div class="case-promo">
+        <div class="img-promo"><a href="https://www.danielatacado.com.br/marcas/mormaii-atacado.html" target="_blank" rel="noopener"> <img src="https://www.danielatacado.com.br/media/wysiwyg/mormaii.jpg" alt=""> </a></div>
+        <p>Ver novidades</p>
+        <h5>Masculino</h5>
+        <p class="txt-promo">Torne a aventura em uma experiência confortável com a Mormaii. A marca reflete a paixão pela ação e pelo estilo, com foco no conforto. Explore a coleção que une inovação e design, enquanto captura a essência de uma vida ativa e torne cada passo é uma celebração da liberdade.</p>
+    </div>
+<!-- Grendha -->
+    <div class="case-promo">
+        <div class="img-promo"><a href="https://www.danielatacado.com.br/marcas/grendha-atacado.html" target="_blank" rel="noopener"> <img src="https://www.danielatacado.com.br/media/wysiwyg/grendha.jpg" alt=""> </a></div>
+        <p>Ver novidades</p>
+        <h5>Feminino</h5>
+        <p class="txt-promo">Elegância e conforto definem a Grendha. Os modelos da marca refletem o espírito ousado e contemporâneo, combinando moda e bem-estar com designs inovadores. A marca possui modelos ideais para satisfazer as clientes que priorizam a elegância e o bem-estar.</p>
+    </div>
+<!-- Grendene Kids -->
+    <div class="case-promo">
+        <div class="img-promo"><a href="https://www.danielatacado.com.br/marcas/grendene-kids-atacado.html" target="_blank" rel="noopener"> <img src="https://www.danielatacado.com.br/media/wysiwyg/grendenekids.jpg" alt=""> </a></div>
+        <p>Ver novidades</p>
+        <h5>Marcas</h5>
+        <p class="txt-promo">Conforto e alegria se juntam com a Grendene Kids. Os modelos cativam o coração dos pequenos, combinando cores vibrantes, design atraente e a qualidade que só a Grendene possui. Modelos ideais para quem está sempre buscando o conforto e segurança dos primeiros passos dos pequeninos.</p>
+    </div>
+<!-- Azaleia -->
+    <div class="case-promo">
+        <div class="img-promo"><a href="https://www.danielatacado.com.br/marcas/azaleia-atacado.html" target="_blank" rel="noopener"> <img src="https://www.danielatacado.com.br/media/wysiwyg/azaleia.jpg" alt=""> </a></div>
+        <p>Ver novidades</p>
+        <h5>Azaleia</h5>
+        <p class="txt-promo">A fusão perfeita de elegância com o conforto. Os modelos são uma expressão de estilo e bem-estar. Confira os modelos que abraçam seus pés te confortam durante todo o dia. Faça suas clientes levarem elegância por onde quer que passem.</p>
+    </div>
+</div>
+
+<p class="title-b">Como preparar a minha Black Friday?</p>
+
+  <p class="txt-a">Quer fazer uma boa campanha? Aqui vai algumas dicas para você lojista...</p>
+    <ul>
+      <li>
+        <img>
+        <p>Defina os descontos dos produtos</p>
+        <p>Você pode conceder reduções de preços mais conservadoras e aproveitar para instigar os clientes para promoções do fim de novembro.</p>
+      </li>
+      <li>
+        <img>
+        <p>Aposte em descontos progressivos</p>
+        <p>Oferecer descontos progressivos, o que encoraja o consumidor a adquirir produtos. Nesse caso, quanto mais itens ele comprar, maior será o abatimento no valor final de compra.</p>
+      </li>
+      <li>
+        <img>
+        <p>Divulgue nas redes sociais</p>
+        <p>Você pode divulgar cupons de descontos nos stories e criar enquetes, por exemplo.</p>
+      </li>
+      <li>
+        <img>
+        <p>Faça kits promocionais</p>
+        <p>Isso é especialmente válido para conseguir dar vazão aos itens que não saem com tanta facilidade.</p>
+      </li>
+    </ul>
+
+
+<!--<div class="clubes">
+    <p class="title-b">Participe do nosso clube</p>
+    <p class="txt-a">Nosso clube permite que você receba <strong> 1% de cashback</strong> em todos modelos que oferecemos, para que você economize ainda mais quando comprar novamente conosco! Também há promoções de <strong>cashback turbinado</strong> que podem lhe permitir receber até <strong>30% de cashback</strong>!</p>
+    <a href="https://www.clubelucramais.com.br/" target="_blank" rel="noopener"> <img src="https://www.danielatacado.com.br/media/wysiwyg/lucramais.jpg" alt=""></a>
+
+    <p class="title-b">Siga-nos nas redes sociais</p>
+    <p class="txt-a">Acompanhe-nos em nossas redes sociais e fique sempre por dentro das novidades para que sua vitrine esteja sempre preenchida com nossos lançamentos fresquinhos da Grendene!</p>
+    <a href="https://linktr.ee/danielcalcados" target="_blank" rel="noopener"> <img src="https://www.danielatacado.com.br/media/wysiwyg/linktree.jpg" alt=""></a>
+
+    <p class="title-b">Compre com um vendedor</p>
+    <p class="txt-a">Caso tenha interesse por algum de nossos produtos, não hesite em entrar em contato com um de nossos vendedores. Temos uma equipe de profissionais aguardando por você!</p>
+    <a href="https://web.whatsapp.com/send?l=&amp;phone=5511971528746&amp;text=Olá! Venho através do site. " target="_blank" rel="noopener"> <img src="https://www.danielatacado.com.br/media/wysiwyg/whatsapp.jpg" alt=""></a>
+</div>
+
+<div id="ben" class="cont-ben">
+    <h3 class="title-ben">Nossos benefícios</h3>
+    <div class="case-ben"><img src="https://www.danielatacado.com.br/media/wysiwyg/juros.jpg" alt=""> <img src="https://www.danielatacado.com.br/media/wysiwyg/frete.jpg" alt="">  
+        <img src="https://www.danielatacado.com.br/media/wysiwyg/desconto.jpg" alt="">
+    </div>
+</div>
+
+<p id="blog" class="title-a">Blog - Daniel Atacado</p>
+
+<p class="txt-a">Confira nosso blog onde compartilhamos dicas para lojistas que estão em busca de melhoria contínua. Lá você pode encontrar dicas que te ajudem com <strong>gestão de negócios, vendas online</strong> e até a conhecer melhor sobre os <strong>produtos Grendene</strong>. E aqui selecionamos alguns posts que poderão te ajudar a se preparar para esta <strong>Black November 2024!</strong></p>
+
+<div class="cont-blog">
+    <div class="slider-motor">
+        <a class="img-blog pos1" href="https://blog.danielatacado.com.br/5-dicas-para-vender-mais-na-black-friday/" target="_blank" rel="noopener"><img src="https://www.danielatacado.com.br/media/wysiwyg/5_Dicas_para_vender_mais_na_Black_Friday_1.jpg" alt=""></a>
+
+        <div class="title-blog">
+            <p>5 Dicas para vender mais na Black Friday</p>
+        </div>
+
+        <button id="prev" class="btn-slider-blog"> <img src="https://www.danielatacado.com.br/media/wysiwyg/prev.png" alt=""></button>
+
+        <a class="img-blog pos2" href="https://blog.danielatacado.com.br/promocao-de-fim-de-ano/" target="_blank" rel="noopener"><img src="https://www.danielatacado.com.br/media/wysiwyg/Promo_o_de_fim_de_ano_aumente_as_vendas_de_cal_ados.jpg" alt=""></a>
+
+        <div class="title-blog">
+            <p>Promoções de fim de ano aumente a venda de calçados</p>
+        </div>
+
+        <button id="next" class="btn-slider-blog"> <img src="https://www.danielatacado.com.br/media/wysiwyg/next.png" alt=""> </button> <a class="img-blog pos3" href="https://blog.danielatacado.com.br/black-friday-como-preparar-o-estoque-da-sua-loja-para-esse-dia/" target="_blank" rel="noopener"> <img src="https://www.danielatacado.com.br/media/wysiwyg/ Black_Friday_como_preparar_o_estoque_da_sua_loja_para_esse_dia.jpg" alt=""></a>
+
+        <div class="title-blog">
+            <p>Black Friday como preparar o estoque da sua loja para esse dia</p>
+        </div>
+
+        <a class="img-blog pos4" href="https://blog.danielatacado.com.br/acoes-para-black-friday/" target="_blank" rel="noopener"> <img src="https://www.danielatacado.com.br/media/wysiwyg/20_a_es_para_Black_Friday_no_varejo_cal_adista.jpg" alt=""></a>
+
+        <div class="title-blog">
+            <p>20 ações para Black Friday no varejo calçadista</p>
+        </div>
+    </div>
+</div>
+
+<p class="title-a">Produtos mais procurados</p>
+
+<p class="txt-a">Você quer apostar em produtos que saem com maior frequência? Então confira os produtos mais procurados na Daniel Atacado para seguir as tendências do mercado e garantir suas vendas.</p>
+
+<div class="cont-produtos">
+    <a class="produto" href="https://www.danielatacado.com.br/chinelo-slide-infantil-rider-street-11592-vermelho-preto-atacado-7416.html#180=199&amp;158=48" target="_blank" rel="noopener">Slide rider street <img src="https://www.danielatacado.com.br/media/wysiwyg/mais.png" alt=""> </a>
+    <a class="produto" href="https://www.danielatacado.com.br/chinelo-masculino-rider-street-11573-atacado.html#180=62&amp;158=1840" target="_blank" rel="noopener">chinelo rider street <img src="https://www.danielatacado.com.br/media/wysiwyg/mais.png" alt=""> </a>
+    <a class="produto" href="https://www.danielatacado.com.br/chinelo-infantil-cartago-alabama-11858-azul-azul-bordo-atacado-7618.html#180=1251&amp;158=938" target="_blank" rel="noopener">chinelo Cartago alabama <img src="https://www.danielatacado.com.br/media/wysiwyg/mais.png" alt=""> </a>
+    <a class="produto" href="https://www.danielatacado.com.br/chinelo-slide-feminino-zaxy-partner-iii-18063-cobre-preto-atacado-6698.html#180=1197&amp;158=829" target="_blank" rel="noopener">slide Zaxy Partner III <img src="https://www.danielatacado.com.br/media/wysiwyg/mais.png" alt=""> </a>
+    <a class="produto" href="https://www.danielatacado.com.br/chinelo-ipanema-polly-e-max-steel-26048-preto-preto-verde-atacado-9937.html#180=2429&amp;158=2183" target="_blank" rel="noopener">chinelo polly e max steel <img src="https://www.danielatacado.com.br/media/wysiwyg/mais.png" alt=""> </a>
+    <a class="produto" href="https://www.danielatacado.com.br/chinelo-feminino-ipanema-easy-26770-atacado.html#180=2487&amp;158=32" target="_blank" rel="noopener">chinelo ipanema easy <img src="https://www.danielatacado.com.br/media/wysiwyg/mais.png" alt=""> </a>
+    <a class="produto" href="https://www.danielatacado.com.br/sandalia-disney-magic-aranha-baby-22303-bege-rosa-rosa-atacado-9112.html#180=443&amp;158=2515" target="_blank" rel="noopener">sandália disney magic <img src="https://www.danielatacado.com.br/media/wysiwyg/mais.png" alt=""> </a>
+    <a class="produto" href="https://www.danielatacado.com.br/sandalia-infantil-cartago-dakar-ii-12311-marrom-bege-telha-atacado-7397.html#180=328&amp;158=806" target="_blank" rel="noopener">sandália cartago dakar ii <img src="https://www.danielatacado.com.br/media/wysiwyg/mais.png" alt=""> </a>
+    <a class="produto" href="https://www.danielatacado.com.br/chinelo-infantil-rider-feel-urban-12342-preto-preto-branco-atacado-4202.html#180=312&amp;158=617" target="_blank" rel="noopener">chinelo rider feel urban <img src="https://www.danielatacado.com.br/media/wysiwyg/mais.png" alt=""> </a>
+</div>
+
+<p class="title-a">Venha aproveitar a black 2024!</p>
+
+<p class="txt-a">Deu pra perceber como a Black da Daniel Calçados vai arrasar este ano, né? O mês de novembro vai transbordar de promoções e descontos incríveis e é a sua chance de garantir os melhores produtos e agradar sua freguesia neste momento tão especial.<br><br>Fique atento em nossa loja física, website, whatsapp e redes sociais para garantir o reabastecimento do seu estoque com nossos preços que são uma PE-CHIN-CHA!</p>
+
+<p class="title-a">Perguntas frequentes</p>
+
+<div class="cont-pergunta">
+    <div id="1" class="pergunta">
+        <p>O que vai ter na black november deste ano?</p>
+    </div>
+    <div id="res1" class="resposta">
+        <p>Em 2024, nossa black november promete trazer várias promoções e benefícios para nossos clientes. Dentre os benefícios especiais, é possível esperar que, além dos descontos, também  hajam maiores parcelas, condições especiais de frete, cashbacks turbinados e muito mais! <br><br>Incrível, não é? Então já anote em sua agenda o dia que começará nossa Black November e prrepare-se para atender sua freguesia da melhor forma e garantir seu lucro!</p>
+    </div>
+    <div id="2" class="pergunta">
+        <p>Quando a Black november irá iniciar?</p>
+    </div>
+    <div id="res2" class="resposta">
+        <p>Em 2024, nossa black november irá acontecer a partir do começo do mês de novembro. Estaremos compartilhando em nossas redes sociais e campanhas em nossa loja. Fique ligado para     não deixar essa oportunidade passar sem que você aproveite! Siga-nos <a href="https://linktr.ee/danielcalcados">https://linktr.ee/danielcalcados</a></p>
+    </div>
+    <div id="3" class="pergunta">
+        <p>Quando a black november irá terminar?</p>
+    </div>
+    <div id="res3" class="resposta">
+        <p>A black november irá acabar no último dia do mês de novembro. Você terá um grande espaço de tempo para poder aproveitar tudo, e no dia oficial da Black Friday iremos intensificar   as promoções para que você possa se beneficiar ainda mais. Esse será o período do ano que você terá mais chances de ampliar sua margem de lucro através da compra de produtos Grendene em promoção!</p>
+    </div>
+    <div id="4" class="pergunta">
+        <p>Quais marcas eu devo investir?</p>
+    </div>
+    <div id="res4" class="resposta">
+        <p>A Grendene possui qualidade em todas suas marcas, todas as marcas possuem seus lados vantajosos. Entretanto, nos últimos tempos, as marcas que mais atendem as necessidades do   mercado, e possuem uma alta taxa de rotação em nosso estoque, são: Ipanema, Rider, Zaxy e Cartago.</p>
+    </div>
+    <div id="5" class="pergunta">
+        <p>Como entro no clube lucra mais?</p>
+    </div>
+    <div id="res5" class="resposta">
+        <p>Para se cadastrar no Clube Lucra Mais, será necessário realizar pelo menos uma compra na Daniel Calçados . Finalizando essa primeira compra, será disponibilizado um link de acesso  ao formulário de cadastro. Após o preenchimento do formulário de cadastro, você terá acesso ao seu perfil site do clube por onde irá realizar o resgate de Cashback para suas próximas compras na Daniel Calçados. Faça sua primeira compra agora! <a href="https://www.danielatacado.com.br/" target="_blank" rel="noopener">https://www.danielatacado.com.br/</a></p>
+    </div>
+    <div id="6" class="pergunta">
+        <p>Como recebo cashback?</p>
+    </div>
+    <div id="res6" class="resposta">
+        <p>Para receber seu cashback, será necessário se cadastrar em nosso clube (para participar do clube, visualize clique na dúvida acima dessa.) Você receberá 1% de cashback na   <strong>Daniel Calçados</strong> e poderá resgatar o valor em qualquer compra futura que você realizar. No geral, cada compra que você realiza gera 1%. <br>Entretanto, há modelos com cashbacks turbinados e até mesmo promoções que aumentem o percentual básico de cashback.</p>
+    </div>
+</div>-->
+
+<script>
+
+// Selecione todos os elementos
+let elementos = document.querySelectorAll('.case-promo');
+
+// Defina as opções do observador
+let opcoes = {
+  root: null, // viewport
+  rootMargin: '0px',
+  threshold: 0.02 // 10% do elemento visível
+};
+
+// Defina a função de callback
+let callback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Adicione a classe de animação quando o elemento estiver visível
+      entry.target.classList.add('fade-in-move');
+      entry.target.classList.remove('fade-out');
+    } else {
+      // Adicione a classe de animação 'FadeOut' quando o elemento não estiver visível
+      entry.target.classList.add('fade-out');
+      entry.target.classList.remove('fade-in-move');
+    }
+  });
+};
+
+// Crie o observador
+let observer = new IntersectionObserver(callback, opcoes);
+
+// Comece a observar cada elemento
+elementos.forEach(elemento => {
+  observer.observe(elemento);
+});
+
+</script>
+
+</body>
+</html>

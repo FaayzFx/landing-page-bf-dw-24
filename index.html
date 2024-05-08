@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <title>Landing Page - Estudo</title>
 
 </head>
@@ -86,7 +87,7 @@
 
         <div class="cont-promo">
             <div class="promo-row">
-                <div class="case-promo">
+                <div class="case-promo parallax" data-link="#">
                     <div class="case-promo-content">
                         <img src="/img/renders/banner-home-render-01.png" alt="Render 03" class="render-03">
                         <h2 class="heading-2">Tendências</h2>
@@ -104,7 +105,7 @@
                     </div>
                 </div>
 
-                <div class="case-promo">
+                <div class="case-promo parallax">
                     <div class="case-promo-content">
                         <img src="/img/renders/banner-home-render-01.png" alt="Render 03" class="render-03">
                         <h2 class="heading-2">Tênis & Botas</h2>
@@ -128,7 +129,7 @@
             </div>
 
             <div class="promo-row">
-                <div class="case-promo">
+                <div class="case-promo parallax">
                     <div class="case-promo-content">
                         <img src="/img/renders/banner-home-render-01.png" alt="Render 03" class="render-03">
                         <h2 class="heading-2">Promoções</h2>
@@ -152,7 +153,7 @@
                     </div>
                 </div>
 
-                <div class="case-promo">
+                <div class="case-promo parallax">
                     <div class="case-promo-content">
                         <img src="/img/renders/banner-home-render-01.png" alt="Render 03" class="render-03">
                         <h2 class="heading-2">Infantil</h2>
@@ -175,7 +176,7 @@
             </div>
 
             <div class="promo-row">
-                <div class="case-promo">
+                <div class="case-promo parallax">
                     <div class="case-promo-content">
                         <img src="/img/renders/banner-home-render-01.png" alt="Render 03" class="render-03">
                         <h2 class="heading-2">Masculino</h2>
@@ -198,7 +199,7 @@
                     </div>
                 </div>
 
-                <div class="case-promo">
+                <div class="case-promo parallax">
                     <div class="case-promo-content">
                         <img src="/img/renders/banner-home-render-01.png" alt="Render 03" class="render-03">
                         <h2 class="heading-2">Feminino</h2>
@@ -230,7 +231,7 @@
                 <button class="slider-box-arrow prev"><img src="img/icons/chevrons-left.svg"
                         alt="Seta para esquerda"></button>
                 <div class="slider-box-content">
-                    <img class="render-04" src="images/omaga01.jpeg" alt="Render 04">
+                    <img class="render-04" src="/img/renders/banner-home-render-01.png" alt="Render 04">
                     <div class="slider-box-info">
                         <h3 class="heading-2">Havaianas</h3>
                         <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -242,11 +243,11 @@
                 <button class="slider-box-arrow next"><img src="img/icons/chevrons-right.svg"
                         alt="Seta para direita"></button>
             </li>
-            <li class="slider-box active">
+            <li class="slider-box">
                 <button class="slider-box-arrow prev"><img src="img/icons/chevrons-left.svg"
                         alt="Seta para esquerda"></button>
                 <div class="slider-box-content">
-                    <img class="render-04" src="images/omaga01.jpeg" alt="Render 04">
+                    <img class="render-04" src="/img/renders/banner-home-render-01.png" alt="Render 04">
                     <div class="slider-box-info">
                         <h3 class="heading-2">Havaianas</h3>
                         <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -286,7 +287,7 @@
                     <h3 class="heading-2">Frete<br>Grátis</h3>
                     <p class="paragraph-1">Em compras acima<br>de R$ 3.000,00</p>
                 </div>
-                <a href="#" class="conditions-link">Confira as condições</a>
+                <a href="#" class="conditions-link">Confira as condições  ↗</a>
             </li>
             <li class="conditions-box">
                 <div class="conditions-box-info">
@@ -294,7 +295,7 @@
                     <h3 class="heading-2">Desconto<br>no pix</h3>
                     <p class="paragraph-1">Pague à vista e<br>receba 3% de<br>desconto</p>
                 </div>
-                <a href="#" class="conditions-link">Confira as condições</a>
+                <a href="#" class="conditions-link">Confira as condições  ↗</a>
             </li>
             <li class="conditions-box">
                 <div class="conditions-box-info">
@@ -302,7 +303,7 @@
                     <h3 class="heading-2">Pagamento<br>parcelado</h3>
                     <p class="paragraph-1">Parcelamento no<br>cartão em até<br>4x sem juros</p>
                 </div>
-                <a href="#" class="conditions-link">Confira as condições</a>
+                <a href="#" class="conditions-link">Confira as condições  ↗</a>
             </li>
             <li class="conditions-box">
                 <div class="conditions-box-info">
@@ -310,7 +311,7 @@
                     <h3 class="heading-2">Pronta<br>entrega</h3>
                     <p class="paragraph-1">Enviamos para<br>todo o Brasil</p>
                 </div>
-                <a href="#" class="conditions-link">Confira as condições</a>
+                <a href="#" class="conditions-link">Confira as condições  ↗</a>
             </li>
         </ul>
     </section>
@@ -364,41 +365,96 @@
         let activeBox = 0;
         sliderBoxes[activeBox].classList.add('active');
 
+        // Apply the transform effect to all slider boxes
+        sliderBoxes.forEach((sliderBox, i) => {
+        sliderBox.style.transform = `translateX(${(i - activeBox + sliderBoxes.length) % sliderBoxes.length * 125}%)`;
+        });
+
         // Add event listeners to the arrow buttons
         sliderBoxes.forEach((sliderBox, index) => {
-            const prevArrow = sliderBox.querySelector('.prev');
-            const nextArrow = sliderBox.querySelector('.next');
+        const prevArrow = sliderBox.querySelector('.prev');
+        const nextArrow = sliderBox.querySelector('.next');
 
-            prevArrow.addEventListener('click', () => {
-                setActiveBox(index - 1);
-            });
+        prevArrow.addEventListener('click', () => {
+            setActiveBox(index - 1);
+        });
 
-            nextArrow.addEventListener('click', () => {
-                setActiveBox(index + 1);
-            });
+        nextArrow.addEventListener('click', () => {
+            setActiveBox(index + 1);
+        });
         });
 
         // Function to set the active box
         function setActiveBox(index) {
-            // Remove active class from all boxes
-            sliderBoxes.forEach((sliderBox) => {
-                sliderBox.classList.remove('active');
-            });
+        // Remove active class from all boxes
+        sliderBoxes.forEach((sliderBox) => {
+            sliderBox.classList.remove('active');
+        });
 
-            // Set the new active box
-            activeBox = index;
-            if (activeBox < 0) {
-                activeBox = sliderBoxes.length - 1;
-            } else if (activeBox >= sliderBoxes.length) {
-                activeBox = 0;
-            }
-            sliderBoxes[activeBox].classList.add('active');
+        // Set the new active box, with loop effect
+        activeBox = (index + sliderBoxes.length) % sliderBoxes.length;
+        sliderBoxes[activeBox].classList.add('active');
 
-            // Animate the transition
-            sliderBoxes.forEach((sliderBox, i) => {
-                sliderBox.style.transform = `translateX(${(i - activeBox) * 100}%)`;
-            });
+        // Animate the transition
+        sliderBoxes.forEach((sliderBox, i) => {
+            sliderBox.style.transform = `translateX(${(i - activeBox) * 125}%)`;
+        });
         }
+
+    </script>
+
+    <script>
+
+(function() {
+  // Get all elements with the class "parallax"
+  const elems = document.querySelectorAll(".parallax");
+
+  // Add event listener
+  document.addEventListener("mousemove", parallax);
+
+  // Define the perspective value and rotation speed
+  const perspective = 750;
+  const rotationSpeed = 0.05;
+
+  // Magic happens here
+  function parallax(e) {
+    elems.forEach((elem) => {
+      const _w = elem.offsetWidth / 2;
+      const _h = elem.offsetHeight / 2;
+      const _mouseX = e.clientX;
+      const _mouseY = e.clientY;
+      const elemRect = elem.getBoundingClientRect(); // Get the element's bounding rectangle
+      const isHovering = (_mouseX >= elemRect.left && _mouseX <= elemRect.right && _mouseY >= elemRect.top && _mouseY <= elemRect.bottom); // Check if the cursor is hovering over the element
+
+      if (isHovering) {
+        const rotateX = `rotateX(${(-(_mouseY - elemRect.top) / elemRect.height + 0.5) * rotationSpeed * 180}deg)`; // Rotate X axis based on cursor position relative to the element (inverted)
+        const rotateY = `rotateY(${((_mouseX - elemRect.left) / elemRect.width - 0.5) * rotationSpeed * 180}deg)`; // Rotate Y axis based on cursor position relative to the element
+        const transform = `perspective(${perspective}px) ${rotateX} ${rotateY}`;
+        elem.style.transform = transform;
+      } else {
+        elem.style.transform = ""; // Reset transform when not hovering
+      }
+    });
+  }
+})();
+
+
+// Get the.case-promo element
+const promoElement = document.querySelector(".case-promo");
+
+// Add click event listener to the.case-promo element
+promoElement.addEventListener("click", function(event) {
+  // Stop the event from propagating to the child elements
+  event.stopPropagation();
+
+  // Get the link URL from the data-link attribute
+  const linkUrl = promoElement.getAttribute("data-link");
+
+  // Redirect the user to the link URL
+  if (linkUrl) {
+    window.location.href = linkUrl;
+  }
+});
 
     </script>
 
