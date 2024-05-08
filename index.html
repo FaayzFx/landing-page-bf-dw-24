@@ -230,7 +230,7 @@
                 <button class="slider-box-arrow prev"><img src="img/icons/chevrons-left.svg"
                         alt="Seta para esquerda"></button>
                 <div class="slider-box-content">
-                    <img class="render-04" src="images/omaga01.jpeg" alt="Render 04">
+                    <img class="render-04" src="/img/renders/banner-home-render-01.png" alt="Render 04">
                     <div class="slider-box-info">
                         <h3 class="heading-2">Havaianas</h3>
                         <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -242,11 +242,11 @@
                 <button class="slider-box-arrow next"><img src="img/icons/chevrons-right.svg"
                         alt="Seta para direita"></button>
             </li>
-            <li class="slider-box active">
+            <li class="slider-box">
                 <button class="slider-box-arrow prev"><img src="img/icons/chevrons-left.svg"
                         alt="Seta para esquerda"></button>
                 <div class="slider-box-content">
-                    <img class="render-04" src="images/omaga01.jpeg" alt="Render 04">
+                    <img class="render-04" src="/img/renders/banner-home-render-01.png" alt="Render 04">
                     <div class="slider-box-info">
                         <h3 class="heading-2">Havaianas</h3>
                         <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -364,41 +364,45 @@
         let activeBox = 0;
         sliderBoxes[activeBox].classList.add('active');
 
+        // Apply the transform effect to all slider boxes
+        sliderBoxes.forEach((sliderBox, i) => {
+        sliderBox.style.transform = `translateX(${(i - activeBox + sliderBoxes.length) % sliderBoxes.length * 125}%)`;
+        });
+
         // Add event listeners to the arrow buttons
         sliderBoxes.forEach((sliderBox, index) => {
-            const prevArrow = sliderBox.querySelector('.prev');
-            const nextArrow = sliderBox.querySelector('.next');
+        const prevArrow = sliderBox.querySelector('.prev');
+        const nextArrow = sliderBox.querySelector('.next');
 
-            prevArrow.addEventListener('click', () => {
-                setActiveBox(index - 1);
-            });
+        prevArrow.addEventListener('click', () => {
+            setActiveBox(index - 1);
+        });
 
-            nextArrow.addEventListener('click', () => {
-                setActiveBox(index + 1);
-            });
+        nextArrow.addEventListener('click', () => {
+            setActiveBox(index + 1);
+        });
         });
 
         // Function to set the active box
         function setActiveBox(index) {
-            // Remove active class from all boxes
-            sliderBoxes.forEach((sliderBox) => {
-                sliderBox.classList.remove('active');
-            });
+        // Remove active class from all boxes
+        sliderBoxes.forEach((sliderBox) => {
+            sliderBox.classList.remove('active');
+        });
 
-            // Set the new active box
-            activeBox = index;
-            if (activeBox < 0) {
-                activeBox = sliderBoxes.length - 1;
-            } else if (activeBox >= sliderBoxes.length) {
-                activeBox = 0;
-            }
-            sliderBoxes[activeBox].classList.add('active');
+        // Set the new active box, with loop effect
+        activeBox = (index + sliderBoxes.length) % sliderBoxes.length;
+        sliderBoxes[activeBox].classList.add('active');
 
-            // Animate the transition
-            sliderBoxes.forEach((sliderBox, i) => {
-                sliderBox.style.transform = `translateX(${(i - activeBox) * 100}%)`;
-            });
+        // Animate the transition
+        sliderBoxes.forEach((sliderBox, i) => {
+            sliderBox.style.transform = `translateX(${(i - activeBox) * 125}%)`;
+        });
         }
+
+    </script>
+
+    <script>
 
     </script>
 
