@@ -38,7 +38,6 @@ body {
     background-size: cover;
     z-index: -1;
     perspective: 5px;
-
 }
 
 :root {
@@ -54,6 +53,19 @@ body {
 
 main, section {
     min-height: 60rem;
+}
+
+.info-section,.categories,.brands,.conditions,.tips,.blog,.faq {
+    width: 100%;
+    max-width: var(--margin--zero);
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 75px 0;
+    padding: 100px 0;
 }
 
 
@@ -236,19 +248,6 @@ main, section {
 
 
 
-.info-section {
-    width: 100%;
-    max-width: var(--margin--zero);
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    gap: 75px 0;
-    padding: 100px 0;
-}
-
 .render-02 {
     width: 320px;
 }
@@ -285,15 +284,6 @@ main, section {
 
 
 
-.categories {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    gap: 75px 0;
-    padding: 100px 0;
-}
-
 .cont-promo {
     width: 100%;
     max-width: var(--margin--zero);
@@ -322,17 +312,25 @@ main, section {
     justify-content: space-between;
     padding: 25px;
     align-items: center;
-    border: 2px solid var(--cor-secundaria);
+    border: 2px solid #252525;
     border-radius: 25px;
     gap: 25px 0;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: 0.5s ease;
 }
 
-.case-promo {
-    cursor: pointer;
-  }
+.case-promo:hover {
+    -webkit-transform: scale(1.1);
+    transform: 1.1;
+    border: 2px solid var(--cor-secundaria);
+}
 
-.case-promo.parallax {
-    transition: .2s ease-out;
+.case-promo:hover .stroke-division {
+    transition: 0.5s ease;
+    border: 1px solid var(--cor-secundaria);
+
 }
 
 .case-promo-content {
@@ -373,9 +371,9 @@ main, section {
 }
 
 .stroke-division {
-
     width: 100%;
-    border: 1px solid var(--cor-secundaria);
+    border: 1px solid #252525;
+    transition: 0.5s ease;
 }
 
 .case-promo-bottom {
@@ -406,18 +404,13 @@ main, section {
 
 .brands {
     min-height: 0vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    gap: 75px 0;
-    padding: 100px 0;
+    max-width: 100%;
 }
 
 .slider-cont {
     position: relative;
     width: 100%;
-    height: 450px; /* Added a fixed height */
+    height: 399px; /* Added a fixed height */
     overflow: hidden;
     display: flex;
     flex-wrap: nowrap;
@@ -524,15 +517,6 @@ main, section {
     min-height: 0vh;
 }
 
-.conditions {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    gap: 75px 0;
-    padding: 100px 0;
-}
-
 .conditions-cont {
     width: 100%;
     max-width: 64rem;
@@ -590,15 +574,6 @@ main, section {
 
 
 
-.tips {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    gap: 75px 0;
-    padding: 100px 0;
-}
-
 .tips .paragraph {
     font-size: 2rem;
     text-align: center;
@@ -611,7 +586,7 @@ main, section {
     max-width: 64rem;
     margin-left: auto;
     margin-right: auto;
-    gap: 25px;
+    gap: 29px 25px;
 }
 
 .tips-box {
@@ -635,7 +610,7 @@ main, section {
 
 .tips-box:hover {
     -webkit-transform: scale(1.1);
-    transform: 1.1;
+    transform: scale(1.1);
     border: 2px solid var(--cor-secundaria);
 }
 
@@ -645,11 +620,24 @@ main, section {
 }
 
 .tips-box .heading-2 {
+    align-content: center;
     font-size: 1.25rem;
     text-align: center;
+    width: auto;
+    height: 72px;
 }
 
 .tips-box .paragraph-1 {
     font-size: 1rem;
+
+}
+
+
+
+/* Blog */
+
+
+
+.blog {
 
 }
