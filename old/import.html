@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Landing Page - Estudo</title>
+
+</head>
+
+<body>
+
+    <style>
+
+        @font-face {
+            font-family: 'Monument';
+            src: url(https://cdn.jsdelivr.net/gh/FaayzFx/landing-page-bf-dw-24@main/fonts/MonumentExtended-Regular.otf
+) format('otf');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Monument Regular';
+            src: url(https://cdn.jsdelivr.net/gh/FaayzFx/landing-page-bf-dw-24@main/fonts/MonumentExtended-Ultrabold.otf) format('otf');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Outfit';
+            font-style: normal;
+            font-display: swap;
+            font-weight: 100 900;
+            src: url(https://cdn.jsdelivr.net/fontsource/fonts/outfit:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+            unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+        }
+
+
+
+
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        body {
+            background-image: url(/img/bg/lp-bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+            perspective: 5px;
+        }
+
+        :root {
+            --cor-primaria: #000;
+            --cor-secundaria: #FF143A;
+            --cor-terciaria: #fff;
+            --fonte-heading: 'Monument', sans-serif;
+            --fonte-heading-2: 'Monument Regular', sans-serif;
+            --fonte-paragraph: 'Outfit', sans-serif;
+            --margin--zero: 64rem;
+            --margin--one: 1024px;
+        }
+
+        main, section {
+            min-height: 60rem;
+        }
+
+        .info-section,.categories,.brands,.conditions,.tips,.blog,.faq {
+            width: 100%;
+            max-width: var(--margin--zero);
+            margin-right: auto;
+            margin-left: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            gap: 75px 0;
+            padding: 100px 0;
+        }
+
+
+
+        /* Cabeçalho */
+
+
+
+        .nav-bar {
+            width: 100%;
+            padding: 42px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            backdrop-filter: blur(.25rem);
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+
+        }
+
+        .nav-bar-content {
+            max-width: var(--margin--zero);
+            margin-right: auto;
+            margin-left: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .nav-bar-icon {
+            width: 45px;
+        }
+
+        .nav-bar-content-links {
+            display: flex;
+            align-items: baseline;
+            width: 480px;
+            justify-content: space-between;
+        }
+
+        .links-nav {
+            font-family: var(--fonte-paragraph);
+            font-size: 20px;
+            color: var(--cor-terciaria);
+        }
+
+        .links-nav-box {
+            font-family: var(--fonte-heading-2);
+            padding: 10px 20px;
+            color: var(--cor-terciaria);
+            background-color: var(--cor-secundaria);
+            border-radius: 20px;
+        }
+
+
+
+        /* Conteúdo Home */
+
+
+
+        .banner-home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            gap: 0 50px;
+        }
+
+        .home-content {
+            width: 100%;
+            max-width: var(--margin--zero);
+            margin-right: auto;
+            margin-left: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .home-content-right {
+            display: flex;
+            flex-direction: column;
+            width: 460px;
+            gap: 20px;
+        }
+
+        .heading {
+            position: static;
+            color: var(--cor-terciaria);
+            font-family: var(--fonte-heading);
+            font-size: 3.5rem;
+            text-wrap: wrap;
+        }
+
+        .heading-highlight {
+            color: var(--cor-secundaria);
+            font-family: var(--fonte-heading-2);
+            font-size: 3rem;
+        }
+
+        .home-content .heading-highlight {
+            font-family: var(--fonte-heading);
+            font-size: 3.5rem;
+        }
+
+        .paragraph {
+            font-family: var(--fonte-paragraph);
+            font-size: 1.3rem;
+            color: var(--cor-terciaria);
+
+        }
+
+        .render-01 {
+            max-width: 100%;
+            height: 420px;
+            flex-shrink: 3
+        }
+
+
+
+        /* Timer */
+
+
+
+        .timer {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+        }
+
+        .heading-3 {
+            font-family: var(--fonte-heading-2);
+            font-size: 1.5rem;
+            color: var(--cor-terciaria)
+        }
+
+        .timer-cont {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 0.8rem;
+        }
+
+        .timer-box {
+            padding: 10px;
+            text-align: center;
+            border: 2px solid var(--cor-secundaria);
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(.5rem);
+            border-radius: 12px;
+            color: var(--cor-terciaria);
+        }
+
+        .timer-number {
+            font-family: var(--fonte-paragraph);
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+        .paragraph-1 {
+            font-family: var(--fonte-paragraph);
+            color: var(--cor-terciaria);
+            font-size: 1.25rem;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .scroll-down-icon {
+            position: absolute;
+            align-self: center;
+            width: 35px;
+            height: 35px;
+            bottom: 4rem;
+        }
+
+
+
+        /* Seção de informações */
+
+
+
+        .render-02 {
+            width: 320px;
+        }
+
+        .info-content-01,.info-content-03 {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info-content-02 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info-content-01 .paragraph {
+            width: 50%;
+        }
+
+        .info-content-02 .paragraph {
+            width: 50%;
+        }
+
+        .info-content-03 .paragraph {
+            width: 50%;
+        }
+
+
+
+        /* Categorias */
+
+
+
+        .cont-promo {
+            width: 100%;
+            max-width: var(--margin--zero);
+            margin-right: auto;
+            margin-left: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 75px 0;
+
+        }
+
+        .promo-row {
+            display: flex;
+            flex-direction: row;
+            gap: 0 50px;
+            justify-content: center;
+        }
+
+        .case-promo {
+            height: 720px;
+            width: 435px;
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(.5rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 25px;
+            align-items: center;
+            border: 2px solid #252525;
+            border-radius: 25px;
+            gap: 25px 0;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: -webkit-transform 0.5s ease;
+            transition: 0.5s ease;
+        }
+
+        .case-promo:hover {
+            -webkit-transform: scale(1.1);
+            transform: 1.1;
+            border: 2px solid var(--cor-secundaria);
+        }
+
+        .case-promo:hover .stroke-division {
+            transition: 0.5s ease;
+            border: 1px solid var(--cor-secundaria);
+
+        }
+
+        .case-promo-content {
+            max-height: 580px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 25px 0;
+
+        }
+
+        .render-03 {
+            height: 250px;
+        }
+
+        .heading-1 {
+            font-family: var(--fonte-heading-2);
+            color: var(--cor-terciaria);
+            text-align: center;
+            font-size: 3rem;
+
+        }
+
+        .heading-2 {
+            font-family: var(--fonte-heading-2);
+            color: var(--cor-secundaria);
+            text-align: center;
+            font-size: 1.5rem;
+
+        }
+
+        .case-promo-cta-box {
+            display: grid;
+            width: 100%;
+            gap: 25px;
+
+        }
+
+        .stroke-division {
+            width: 100%;
+            border: 1px solid #252525;
+            transition: 0.5s ease;
+        }
+
+        .case-promo-bottom {
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 0 15px;
+        }
+
+        .case-promo-bottom-text {
+            font-family: var(--fonte-heading-2);
+            font-size: 1.5rem;
+            color: var(--cor-terciaria);
+        }
+
+        .case-promo-cta-icon {
+            width: 15px;
+            height: 15px;
+        }
+
+
+
+        /* Marcas */
+
+
+
+        .brands {
+            min-height: 0vh;
+            max-width: 100%;
+        }
+
+        .slider-cont {
+            position: relative;
+            width: 100%;
+            height: 399px; /* Added a fixed height */
+            overflow: hidden;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center; /* Center the slider horizontally */
+        }
+        
+        .slider-box {
+            position: absolute;
+            margin: 0 4rem 0 4rem;
+            width: 100%;
+            max-width: 64rem;
+            transform: translate(-70%, -70%);
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(0.5rem);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 50px;
+            align-items: center;
+            border: 2px solid var(--cor-secundaria);
+            border-radius: 25px;
+            gap: 0 50px;
+            scale: 0.8;
+            transition: 0.5s ease;
+            opacity: 0.5;
+            filter: blur(.2rem);
+        }
+        
+        .slider-box.active {
+            filter: blur(0);
+            scale: 1;
+            z-index: 1;
+            opacity: 1;
+            transform: translate(0);
+            transition: 0.5s ease;
+        }
+        
+        .slider-box-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        
+        .slider-box-arrow.prev {
+            left: 20px;
+        }
+        
+        .slider-box-arrow.next {
+            right: 20px;
+        }
+
+        .slider-box-content {
+            width: auto;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            gap: 4rem;
+            justify-content: space-between;
+        }
+
+        .render-04 {
+            width: 250px;
+        }
+
+        .slider-box-info {
+            width: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .slider-box-info .heading-2 {
+            text-align: left;
+            font-size: 2.5rem;
+        }
+
+        .slider-box-arrow {
+            background: none;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            cursor: pointer;
+            color: var(--cor-terciaria)
+        }
+
+        .cta-box {
+            max-width: fit-content;
+            padding: 10px 30px;
+            background-color: var(--cor-secundaria);
+            font-family: var(--fonte-heading-2);
+            font-size: 1rem;
+            color: var(--cor-terciaria);
+            border-radius: .5rem;
+        }
+
+
+
+        /* Condições */
+
+
+
+        .conditions {
+            min-height: 0vh;
+        }
+
+        .conditions-cont {
+            width: 100%;
+            max-width: 64rem;
+            margin-right: auto;
+            margin-left: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .conditions-box {
+            height: 360px;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .conditions-box-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            gap: 30px;
+        }
+
+        .conditions-box-info .heading-2 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .conditions-box-info .paragraph-1 {
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .conditions-link {
+            text-align: center;
+            text-decoration: underline 1.5px;
+            text-underline-offset: 0.2em;
+            color: var(--cor-terciaria);
+            font-family: var(--fonte-paragraph);
+            font-size: 1.15rem;
+        }
+
+        .conditions-icon {
+            width: auto;
+            height: 90px;
+        }
+
+
+
+        /* Dicas */
+
+
+
+        .tips .paragraph {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .tips-cont {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 64rem;
+            margin-left: auto;
+            margin-right: auto;
+            gap: 29px 25px;
+        }
+
+        .tips-box {
+            height: 25rem;
+            width: 20.29rem;
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(.5rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 25px;
+            align-items: center;
+            border: 2px solid #252525;
+            border-radius: 25px;
+            gap: 25px 0;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: -webkit-transform 0.5s ease;
+            transition: 0.5s ease;
+        }
+
+        .tips-box:hover {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+            border: 2px solid var(--cor-secundaria);
+        }
+
+        .render-05 {
+            width: auto;
+            height: 120px;
+        }
+
+        .tips-box .heading-2 {
+            align-content: center;
+            font-size: 1.25rem;
+            text-align: center;
+            width: auto;
+            height: 72px;
+        }
+
+        .tips-box .paragraph-1 {
+            font-size: 1rem;
+
+        }
+
+    </style>
+
+    <header class="nav-bar">
+        <nav class="nav-bar-content">
+            <a href="#"><img src="/img/logo-wilson-home-w.png" alt="Logo Distribuidora Wilson" class="nav-bar-icon"></a>
+            <div class="nav-bar-content-links">
+                <a class="links-nav" href="#">Home</a>
+                <a class="links-nav" href="#">Preços</a>
+                <a class="links-nav" href="#">Sobre</a>
+                <a class="links-nav-box" href="#final">Compre Agora</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="banner-home">
+        <div class="home-content">
+            <div class="home-content-right">
+                <h1 class="heading">A Black das <strong class="heading-highlight">Blacks!</strong></h1>
+
+                <p class="paragraph">Prepare-se para a maior Black Friday de todos os tempos! Descontos incríveis estão
+                    chegando. Você não vai querer perder! Aproveite o mês de novembro inteiro...</p>
+
+                <div class="timer">
+                    <h3 class="heading-3">Começa em</h3>
+                    <div class="timer-cont">
+                        <div class="timer-box">
+                            <p id="day" class="timer-number">300</p>
+                            <p class="paragraph-1">Dias</p>
+                        </div>
+                        <div class="timer-box">
+                            <p id="hrs" class="timer-number">300</p>
+                            <p class="paragraph-1">Hrs</p>
+                        </div>
+                        <div class="timer-box">
+                            <p id="min" class="timer-number">300</p>
+                            <p class="paragraph-1">Min</p>
+                        </div>
+                        <div class="timer-box">
+                            <p id="seg" class="timer-number">300</p>
+                            <p class="paragraph-1">Seg</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img src="/img/renders/banner-home-render-01.png" alt="Render 01" class="render-01">
+        </div>
+        <!--<img src="/img/arrow-down.png" alt="Scroll" class="scroll-down-icon">-->
+    </main>
+
+    <section class="info-section">
+        <article class="info-content-01">
+            <p class="paragraph">Se você é um revendedor em busca das melhores margens, a Distribuidora Wilson tem
+                ofertas exclusivas para você.<br><br>Aproveite descontos especiais e proporcione aos seus clientes a
+                moda mais atualizada e preços irresistíveis.</p>
+            <img src="/img/renders/banner-home-render-01.png" alt="Render 02" class="render-02">
+        </article>
+
+        <article class="info-content-02">
+            <p class="paragraph">Esteja pronto para se surpreender com ofertas que vão além do esperado.<br><br>A
+                Distribuidora Wilson está comprometida em proporcionar descontos exclusivos em uma ampla gama de
+                produtos, desde calçados abertos até os fechados, entre eles as melhores marcas renomadas!</p>
+            <img src="/img/renders/banner-home-render-01.png" alt="Render 02" class="render-02">
+        </article>
+
+        <article class="info-content-03">
+            <p class="paragraph"> A Black Friday tem se tornado algo comum no Brasil. No início, não havia muitas lojas
+                que aderiam a essa ação em seu plano comercial.<br><br>No entanto, com o passar dos anos, as pessoas se
+                tornaram mais receptivas a essa ideia! Hoje, tornou-se uma data significativa para lojistas de todos os
+                nichos. Afinal, quem não gosta de uma promoção, não é mesmo?</p>
+            <img src="/img/renders/banner-home-render-01.png" alt="Render 02" class="render-02">
+        </article>
+    </section>
+
+    <section class="categories">
+        <h1 class="heading-1">OFERTAS POR TEMPO<br><strong class="heading-highlight">LIMITADO!</strong></h1>
+
+        <div class="cont-promo">
+            <div class="promo-row">
+                <div class="case-promo">
+                    <div class="case-promo-content">
+                        <img src="/img/renders/banner-home-render-01.png" alt="Render 03" class="render-03">
+                        <h2 class="heading-2">Tendências</h2>
+                        <p class="paragraph-1">Está precisando de novas indicações para a sua loja?<br><br>Aqui na
+                            Wilson, você encontra diversos modelos no atacado. Aproveite para se preparar com as
+                            melhores tendências e aumentar a sua margem de lucro.</p>
+                    </div>
+                    <div class="case-promo-cta-box">
+                        <hr class="stroke-division">
+                        <a href="#" class="case-promo-bottom">
+                            <p class="case-promo-bottom-text">Veja Aqui</p>
+                            <img src="/img/icons/arrow-diagonal-weight.png" alt="Botão de redirecionamento"
+                                class="case-promo-cta-icon">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="case-promo">
+                    <div class="case-promo-content">
+                        <img src="/img/renders/banner-home-render-01.png" alt="Render 03" class="render-03">
+                        <h2 class="heading-2">Tênis & Botas</h2>
+                        <p class="paragraph-1">A coleção indispensável para o inverno inclui o mix de tênis e botas,
+                            entre elas temos promoções.
+                            <br>
+                            <br>
+                            Portanto, a melhor opção é se preparar com marcas renomadas de calçados fechados para
+                            aquecer suas vendas nesta estação.
+                        </p>
+                    </div>
+                    <div class="case-promo-cta-box">
+                        <hr class="stroke-division">
+                        <a href="#" class="case-promo-bottom">
+                            <p class="case-promo-bottom-text">Veja Aqui</p>
+                            <img src="/img/icons/arrow-diagonal-weight.png" alt="Botão de redirecionamento"
+                                class="case-promo-cta-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="promo-row">
+                <div class="case-promo">
+                    <div class="case-promo-content">
+                        <img src="/img/renders/banner-home-render-01.png" alt="Render 03" class="render-03">
+                        <h2 class="heading-2">Promoções</h2>
+                        <p class="paragraph-1">A marca Havaianas é uma referência notável quando se trata de calçados,
+                            sendo um produto excelente para comercializar no verão e ao longo do ano, pois é garantia de
+                            alta demanda contínua.
+                            <br>
+                            <br>
+                            Se você já é um revendedor de Havaianas, compreende do que estamos falando. Caso ainda não
+                            seja, recomendo estudar essa grande marca e, se possível, incluí-la em sua loja. Dessa
+                            forma, você poderá oferecer aos seus clientes o melhor do Brasil: as Havaianas!
+                        </p>
+                    </div>
+                    <div class="case-promo-cta-box">
+                        <hr class="stroke-division">
+                        <a href="#" class="case-promo-bottom">
+                            <p class="case-promo-bottom-text">Veja Aqui</p>
+                            <img src="/img/icons/arrow-diagonal-weight.png" alt="Botão de redirecionamento"
+                                class="case-promo-cta-icon">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="case-promo">
+                    <div class="case-promo-content">
+                        <img src="/img/renders/banner-home-render-01.png" alt="Render 03" class="render-03">
+                        <h2 class="heading-2">Infantil</h2>
+                        <p class="paragraph-1">Se você é um revendedor que busca encantar pais e responsáveis com
+                            produtos de qualidade, nosso catálogo de calçados infantis no atacado é a resposta.
+                            <br>
+                            <br>
+                            Abasteça seu estoque!
+                        </p>
+                    </div>
+                    <div class="case-promo-cta-box">
+                        <hr class="stroke-division">
+                        <a href="#" class="case-promo-bottom">
+                            <p class="case-promo-bottom-text">Veja Aqui</p>
+                            <img src="/img/icons/arrow-diagonal-weight.png" alt="Botão de redirecionamento"
+                                class="case-promo-cta-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="promo-row">
+                <div class="case-promo">
+                    <div class="case-promo-content">
+                        <img src="/img/renders/banner-home-render-01.png" alt="Render 03" class="render-03">
+                        <h2 class="heading-2">Masculino</h2>
+                        <p class="paragraph-1">Seja destaque na moda masculina, apresentando aos seus clientes as
+                            últimas tendências em calçados.
+                            <br>
+                            <br>
+                            Impulsione suas vendas e faça com que cada passo seja uma declaração de estilo. Junte-se a
+                            nós no emocionante mundo dos calçados masculinos no atacado e dê aos seus clientes uma
+                            experiência única em moda para os pés. Compre no atacado!
+                        </p>
+                    </div>
+                    <div class="case-promo-cta-box">
+                        <hr class="stroke-division">
+                        <a href="#" class="case-promo-bottom">
+                            <p class="case-promo-bottom-text">Veja Aqui</p>
+                            <img src="/img/icons/arrow-diagonal-weight.png" alt="Botão de redirecionamento"
+                                class="case-promo-cta-icon">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="case-promo">
+                    <div class="case-promo-content">
+                        <img src="/img/renders/banner-home-render-01.png" alt="Render 03" class="render-03">
+                        <h2 class="heading-2">Feminino</h2>
+                        <p class="paragraph-1">Nossa coleção é mais do que simplesmente sapatos; são expressões de
+                            estilo e personalidade.
+                            <br>
+                            <br>
+                            Cada par é escolhido para elevar a confiança da mulher moderna, proporcionando conforto e
+                            elegância em cada passo. Adquira já no atacado!
+                        </p>
+                    </div>
+                    <div class="case-promo-cta-box">
+                        <hr class="stroke-division">
+                        <a href="#" class="case-promo-bottom">
+                            <p class="case-promo-bottom-text">Veja Aqui</p>
+                            <img src="/img/icons/arrow-diagonal-weight.png" alt="Botão de redirecionamento"
+                                class="case-promo-cta-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brands">
+        <h1 class="heading-1">VEJA AS MARCAS<br><strong class="heading-highlight">MAIS VENDIDAS</strong></h1>
+
+        <ul class="slider-cont">
+            <li class="slider-box">
+                <button class="slider-box-arrow prev"><img src="img/icons/chevrons-left.svg"
+                        alt="Seta para esquerda"></button>
+                <div class="slider-box-content">
+                    <img class="render-04" src="/img/renders/banner-home-render-01.png" alt="Render 04">
+                    <div class="slider-box-info">
+                        <h3 class="heading-2">Havaianas</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <a class="cta-box" href="#final">Clique Aqui</a>
+                    </div>
+                </div>
+                <button class="slider-box-arrow next"><img src="img/icons/chevrons-right.svg"
+                        alt="Seta para direita"></button>
+            </li>
+            <li class="slider-box">
+                <button class="slider-box-arrow prev"><img src="img/icons/chevrons-left.svg"
+                        alt="Seta para esquerda"></button>
+                <div class="slider-box-content">
+                    <img class="render-04" src="/img/renders/banner-home-render-01.png" alt="Render 04">
+                    <div class="slider-box-info">
+                        <h3 class="heading-2">Havaianas</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudgit
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <a class="cta-box" href="#final">Clique Aqui</a>
+                    </div>
+                </div>
+                <button class="slider-box-arrow next"><img src="img/icons/chevrons-right.svg"
+                        alt="Seta para direita"></button>
+            </li>
+            <li class="slider-box">
+                <button class="slider-box-arrow prev"><img src="img/icons/chevrons-left.svg"
+                        alt="Seta para esquerda"></button>
+                <div class="slider-box-content">
+                    <img class="render-04" src="/img/renders/banner-home-render-01.png" alt="Render 04">
+                    <div class="slider-box-info">
+                        <h3 class="heading-2">Havaianas</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <a class="cta-box" href="#final">Clique Aqui</a>
+                    </div>
+                </div>
+                <button class="slider-box-arrow next"><img src="img/icons/chevrons-right.svg"
+                        alt="Seta para direita"></button>
+            </li>
+        </ul>
+    </section>
+
+    <section class="conditions">
+        <h1 class="heading-1">O QUE NÓS <br><strong class="heading-highlight">OFERECEMOS?</strong></h1>
+
+        <ul class="conditions-cont">
+            <li class="conditions-box">
+                <div class="conditions-box-info">
+                    <img class="conditions-icon" src="img/icons/truck.png" alt="Frete Grátis">
+                    <h3 class="heading-2">Frete<br>Grátis</h3>
+                    <p class="paragraph-1">Em compras acima<br>de R$ 3.000,00</p>
+                </div>
+                <a href="#" class="conditions-link">Confira as condições  ↗</a>
+            </li>
+            <li class="conditions-box">
+                <div class="conditions-box-info">
+                    <img class="conditions-icon" src="img/icons/pix-icon.png" alt="Desconto no Pix">
+                    <h3 class="heading-2">Desconto<br>no pix</h3>
+                    <p class="paragraph-1">Pague à vista e<br>receba 3% de<br>desconto</p>
+                </div>
+                <a href="#" class="conditions-link">Confira as condições  ↗</a>
+            </li>
+            <li class="conditions-box">
+                <div class="conditions-box-info">
+                    <img class="conditions-icon" src="img/icons/credit-card-fill.png" alt="Pagamento Parcelado">
+                    <h3 class="heading-2">Pagamento<br>parcelado</h3>
+                    <p class="paragraph-1">Parcelamento no<br>cartão em até<br>4x sem juros</p>
+                </div>
+                <a href="#" class="conditions-link">Confira as condições  ↗</a>
+            </li>
+            <li class="conditions-box">
+                <div class="conditions-box-info">
+                    <img class="conditions-icon" src="img/icons/box-seam-fill.png" alt="Pagamento Parcelado">
+                    <h3 class="heading-2">Pronta<br>entrega</h3>
+                    <p class="paragraph-1">Enviamos para<br>todo o Brasil</p>
+                </div>
+                <a href="#" class="conditions-link">Confira as condições  ↗</a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="tips">
+        <h1 class="heading-1">COMO PREPARAR A MINHA<br><strong class="heading-highlight">BLACK FRIDAY?</strong></h1>
+
+        <p class="paragraph">Quer fazer uma boa campanha?<br>Aqui vai algumas dicas para você, lojista!</p>
+
+        <ul class="tips-cont">
+            <li class="tips-box">
+                <img src="/img/renders/banner-home-render-01.png" class="render-05" alt="Render 05">
+                <h3 class="heading-2">Defina os descontos dos produtos</h3>
+                <p class="paragraph-1">Você pode conceder reduções de preços mais conservadoras e aproveitar para instigar os clientes para promoções do fim de novembro.</p>
+            </li>
+            <li class="tips-box">
+                <img src="/img/renders/banner-home-render-01.png" class="render-05" alt="Render 05">
+                <h3 class="heading-2">Aposte em descontos progressivos</h3>
+                <p class="paragraph-1">Encoraje o consumidor a adquirir mais produtos. Quanto mais itens ele comprar, maior será o abatimento no valor final de compra.</p>
+            </li>
+            <li class="tips-box">
+                <img src="/img/renders/banner-home-render-01.png" class="render-05" alt="Render 05">
+                <h3 class="heading-2">Divulgue nas redes sociais</h3>
+                <p class="paragraph-1">Você pode divulgar cupons de descontos nos stories e criar enquetes, por exemplo.</p>
+            </li>
+            <li class="tips-box">
+                <img src="/img/renders/banner-home-render-01.png" class="render-05" alt="Render 05">
+                <h3 class="heading-2">Faça kits promocionais</h3>
+                <p class="paragraph-1">Isso é especialmente válido para conseguir dar vazão aos itens que não saem com tanta facilidade.</p>
+            </li>
+            <li class="tips-box">
+                <img src="/img/renders/banner-home-render-01.png" class="render-05" alt="Render 05">
+                <h3 class="heading-2">Aposte em descontos progressivos</h3>
+                <p class="paragraph-1">Encoraje o consumidor a adquirir mais produtos. Quanto mais itens ele comprar, maior será o abatimento no valor final de compra.</p>
+            </li>
+            <li class="tips-box">
+                <img src="/img/renders/banner-home-render-01.png" class="render-05" alt="Render 05">
+                <h3 class="heading-2">Divulgue nas redes sociais</h3>
+                <p class="paragraph-1">Você pode divulgar cupons de descontos nos stories e criar enquetes, por exemplo.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="blog">
+        <h1 class="heading-1">APRENDA A <strong class="heading-highlight">VENDER MAIS</strong><br>EM NOSSO BLOG!</h1>
+
+        <article class="content-blog">
+            <img src="/img/renders/banner-home-render-01.png" class="render-02" alt="Render 06">
+            <div class="content-blog-info">
+                <p class="paragraph">Se você é um revendedor em busca das melhores margens, a Distribuidora Wilson tem ofertas exclusivas para você.
+                <br>
+                <br>
+                Aproveite descontos especiais e proporcione aos seus clientes a moda mais atualizada e preços irresistíveis.</p>
+                <a class="cta-box">Veja Mais</a>
+            </div>
+        </article>
+    </section>
+
+    <div id="final"></div>
+
+    <script>
+        // Defina a data e hora de término
+        var countDownDate = new Date("Nov 1, 2024 00:00:00").getTime();
+
+        // Atualize a contagem regressiva a cada 1 segundo
+        var countdownfunction = setInterval(function () {
+
+            // Obtenha a data e hora atuais
+            var now = new Date().getTime();
+
+            // Encontre a distância entre agora e a data de término
+            var distance = countDownDate - now;
+
+            // Cálculos de tempo para dias, horas, minutos e segundos
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Exiba o resultado nos elementos correspondentes
+            document.getElementById("day").innerHTML = days;
+            document.getElementById("hrs").innerHTML = hours;
+            document.getElementById("min").innerHTML = minutes;
+            document.getElementById("seg").innerHTML = seconds;
+
+            // Se a contagem regressiva terminar, escreva algum texto
+            if (distance < 0) {
+                clearInterval(countdownfunction);
+                document.getElementById("day").innerHTML = "";
+                document.getElementById("hrs").innerHTML = "";
+                document.getElementById("min").innerHTML = "";
+                document.getElementById("seg").innerHTML = "EXPIRADO";
+            }
+        }, 1000);
+
+    </script>
+
+    <script>
+
+        // Get the slider container and boxes
+        const sliderCont = document.querySelector('.slider-cont');
+        const sliderBoxes = sliderCont.querySelectorAll('.slider-box');
+
+        // Set the active box
+        let activeBox = 0;
+        sliderBoxes[activeBox].classList.add('active');
+
+        // Apply the transform effect to all slider boxes
+        sliderBoxes.forEach((sliderBox, i) => {
+        sliderBox.style.transform = `translateX(${(i - activeBox + sliderBoxes.length) % sliderBoxes.length * 125}%)`;
+        });
+
+        // Add event listeners to the arrow buttons
+        sliderBoxes.forEach((sliderBox, index) => {
+        const prevArrow = sliderBox.querySelector('.prev');
+        const nextArrow = sliderBox.querySelector('.next');
+
+        prevArrow.addEventListener('click', () => {
+            setActiveBox(index - 1);
+        });
+
+        nextArrow.addEventListener('click', () => {
+            setActiveBox(index + 1);
+        });
+        });
+
+        // Function to set the active box
+        function setActiveBox(index) {
+        // Remove active class from all boxes
+        sliderBoxes.forEach((sliderBox) => {
+            sliderBox.classList.remove('active');
+        });
+
+        // Set the new active box, with loop effect
+        activeBox = (index + sliderBoxes.length) % sliderBoxes.length;
+        sliderBoxes[activeBox].classList.add('active');
+
+        // Animate the transition
+        sliderBoxes.forEach((sliderBox, i) => {
+            sliderBox.style.transform = `translateX(${(i - activeBox) * 125}%)`;
+        });
+        }
+
+    </script>
+
+    <script>
+
+        (function() {
+        // Get all elements with the class "parallax"
+        const elems = document.querySelectorAll(".parallax");
+
+        // Add event listener
+        document.addEventListener("mousemove", parallax);
+
+        // Define the perspective value and rotation speed
+        const perspective = 750;
+        const rotationSpeed = 0.05;
+
+        // Magic happens here
+        function parallax(e) {
+            elems.forEach((elem) => {
+            const _w = elem.offsetWidth / 2;
+            const _h = elem.offsetHeight / 2;
+            const _mouseX = e.clientX;
+            const _mouseY = e.clientY;
+            const elemRect = elem.getBoundingClientRect(); // Get the element's bounding rectangle
+            const isHovering = (_mouseX >= elemRect.left && _mouseX <= elemRect.right && _mouseY >= elemRect.top && _mouseY <= elemRect.bottom); // Check if the cursor is hovering over the element
+
+            if (isHovering) {
+                const rotateX = `rotateX(${(-(_mouseY - elemRect.top) / elemRect.height + 0.5) * rotationSpeed * 180}deg)`; // Rotate X axis based on cursor position relative to the element (inverted)
+                const rotateY = `rotateY(${((_mouseX - elemRect.left) / elemRect.width - 0.5) * rotationSpeed * 180}deg)`; // Rotate Y axis based on cursor position relative to the element
+                const transform = `perspective(${perspective}px) ${rotateX} ${rotateY}`;
+                elem.style.transform = transform;
+            } else {
+                elem.style.transform = ""; // Reset transform when not hovering
+            }
+            });
+        }
+        })();
+
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const maincontent = document.querySelector("#maincontent");
+            maincontent.style.maxWidth = "100%";
+        
+            const pageHeader = document.querySelector(".page-header")
+            pageHeader.remove();
+
+            const footerTop = document.querySelector(".footer-top")
+            footerTop.remove();
+
+            const pageFooter = document.querySelector(".page-footer")
+            pageFooter.remove();
+
+            const breadCrumbs = document.querySelector(".breadcrumbs")
+            breadCrumbs.remove();
+        });
+        </script>
+
+</body>
+
+</html>
