@@ -1,27 +1,29 @@
 @font-face {
     font-family: 'Monument';
-    src: url('../fonts/MonumentExtended-Ultrabold.otf');
+    src: url('https://cdn.jsdelivr.net/gh/FaayzFx/landing-page-bf-dw-24@master/fonts/MonumentExtended-Ultrabold.otf') format('opentype');
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Monument Regular';
-    src: url('../fonts/MonumentExtended-Regular.otf');
+    src: url('https://cdn.jsdelivr.net/gh/FaayzFx/landing-page-bf-dw-24@master/fonts/MonumentExtended-Regular.otf') format('opentype');
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Outfit';
-    src: url('../fonts/Outfit-VariableFont_wght.ttf');
-    font-weight: normal;
     font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/outfit:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
 }
 
 
 
-
-
-
+html {
+    font-size: 100%;
+}
 
 * {
     margin: 0;
@@ -33,11 +35,26 @@
 }
 
 body {
-    background-image: url(/img/bg/lp-bg.png);
+    background-color: var(--cor-primaria);
+    background-image: url(https://i.imgur.com/E9ZAfTE.png);
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
     perspective: 5px;
+}
+
+::-webkit-scrollbar {
+    width: .6rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--cor-secundaria);
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    display: none;
 }
 
 :root {
@@ -51,9 +68,15 @@ body {
     --margin--one: 1024px;
 }
 
-main, section {
+main {
     min-height: 60rem;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 
 .info-section,.categories,.brands,.conditions,.tips,.blog,.faq {
     width: 100%;
@@ -65,7 +88,7 @@ main, section {
     justify-content: center;
     align-items: stretch;
     gap: 75px 0;
-    padding: 100px 0;
+    padding: 75px 0;
 }
 
 
@@ -102,7 +125,7 @@ main, section {
 .nav-bar-content-links {
     display: flex;
     align-items: baseline;
-    width: 480px;
+    width: 520px;
     justify-content: space-between;
 }
 
@@ -127,6 +150,7 @@ main, section {
 
 
 .banner-home {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -158,6 +182,7 @@ main, section {
     font-size: 3.5rem;
     text-wrap: wrap;
 }
+
 
 .heading-highlight {
     color: var(--cor-secundaria);
@@ -246,37 +271,47 @@ main, section {
 
 /* Seção de informações */
 
+.info-section {
+    gap: 150px 0;
+}
+
 
 
 .render-02 {
     width: 320px;
 }
 
-.info-content-01,.info-content-03 {
+.info-box-01,.info-box-03 {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
 }
 
-.info-content-02 {
+.info-box-02 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.info-content-01 .paragraph {
+.info-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 75px 0;
     width: 50%;
 }
 
-.info-content-02 .paragraph {
-    width: 50%;
+.info-content .paragraph {
+    font-size: 1.5rem;
 }
 
-.info-content-03 .paragraph {
-    width: 50%;
+.info-content .cta-box {
+    padding: 15px 35px;
+    font-size: 1.35rem;
 }
+
 
 
 
@@ -415,9 +450,9 @@ main, section {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center; /* Center the slider horizontally */
-  }
-  
-  .slider-box {
+}
+
+.slider-box {
     position: absolute;
     margin: 0 4rem 0 4rem;
     width: 100%;
@@ -437,34 +472,36 @@ main, section {
     transition: 0.5s ease;
     opacity: 0.5;
     filter: blur(.2rem);
-  }
-  
-  .slider-box.active {
+}
+
+.slider-box.active {
     filter: blur(0);
     scale: 1;
     z-index: 1;
     opacity: 1;
     transform: translate(0);
     transition: 0.5s ease;
-  }
-  
-  .slider-box-arrow {
+}
+
+.slider-box-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-  }
-  
-  .slider-box-arrow.prev {
+    margin: 0 25px;
+}
+
+.slider-box-arrow.prev {
     left: 20px;
-  }
-  
-  .slider-box-arrow.next {
+}
+
+.slider-box-arrow.next {
     right: 20px;
-  }
+}
 
 .slider-box-content {
-    width: auto;
+    width: 100%;
+    max-width: 45rem;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -494,17 +531,22 @@ main, section {
     outline: none;
     box-shadow: none;
     cursor: pointer;
-    color: var(--cor-terciaria)
+    color: var(--cor-terciaria);
+}
+
+.slider-box-arrow img {
+    width: auto;
+    height: 30px;
 }
 
 .cta-box {
     max-width: fit-content;
-    padding: 10px 30px;
+    padding: 15px 35px;
     background-color: var(--cor-secundaria);
     font-family: var(--fonte-heading-2);
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: var(--cor-terciaria);
-    border-radius: .5rem;
+    border-radius: .75rem;
 }
 
 
@@ -629,7 +671,6 @@ main, section {
 
 .tips-box .paragraph-1 {
     font-size: 1rem;
-
 }
 
 
@@ -638,6 +679,55 @@ main, section {
 
 
 
-.blog {
+.content-blog {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 
+}
+
+.content-blog-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    gap: 4rem;
+    align-items: baseline;
+}
+
+
+
+/* FAQ */
+
+
+
+.faq-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+
+}
+
+.faq-item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: baseline;
+    width: 100%;
+    padding: 35px 50px;
+    background-color: var(--cor-terciaria);
+    border-radius: 1rem;
+}
+
+.faq-item .paragraph {
+    font-family: var(--fonte-paragraph);
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+}
+
+.arrow-faq {
+    width: 20px;
+    height: 100%;
 }

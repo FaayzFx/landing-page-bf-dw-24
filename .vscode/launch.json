@@ -4,12 +4,13 @@
     // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
         {
-            "type": "chrome",
+            "name": "Launch Chrome",
             "request": "launch",
-            "name": "Iniciar o Chrome em relação a localhost",
-            "url": "D:\\ARQUIVOS IMPORTANTES - by Rafah\\Pasta de Design\\Pasta FrontEnd\\Projetos\\LP 02\\index.html",
+            "type": "chrome",
+            "url": "C:\\Users\\Designer\\Desktop\\Rafael 2023\\random\\Landing Page BF 2024\\index.html",
             "webRoot": "${workspaceFolder}"
-        }
+        },
     ]
 }
