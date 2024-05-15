@@ -388,34 +388,58 @@
         <h1 class="heading-1">DÚVIDAS<br><strong class="heading-highlight">FREQUENTES</strong></h1>
         <ul class="faq-cont">
             <li class="faq-item">
-                <p class="paragraph">Pergunta nº</p>
-                <button><img src="https://i.imgur.com/lr1ieb0.png" alt="Seta de suspensão" class="arrow-faq"></button>
+                <div class="faq-question">
+                    <p class="paragraph">Pergunta nº</p>
+                    <button class="faq-arrow"><i class="ri-arrow-down-double-fill"></i></button>
+                </div>
+                <div class="faq-answer">
+                    <p class="paragraph">Resposta</p>
+                </div>
             </li>
 
             <li class="faq-item">
-                <p class="paragraph">Pergunta nº</p>
-                <button><img src="https://i.imgur.com/lr1ieb0.png" alt="Seta de suspensão" class="arrow-faq"></button>
+                <div class="faq-question">
+                    <p class="paragraph">Pergunta nº</p>
+                    <button class="faq-arrow"><i class="ri-arrow-down-double-fill"></i></button>
+                </div>
+                <div class="faq-answer">
+                    <p class="paragraph">Resposta</p>
+                </div>
             </li>
 
             <li class="faq-item">
-                <p class="paragraph">Pergunta nº</p>
-                <button><img src="https://i.imgur.com/lr1ieb0.png" alt="Seta de suspensão" class="arrow-faq"></button>
+                <div class="faq-question">
+                    <p class="paragraph">Pergunta nº</p>
+                    <button class="faq-arrow"><i class="ri-arrow-down-double-fill"></i></button>
+                </div>
+                <div class="faq-answer">
+                    <p class="paragraph">Resposta</p>
+                </div>
             </li>
 
             <li class="faq-item">
-                <p class="paragraph">Pergunta nº</p>
-                <button><img src="https://i.imgur.com/lr1ieb0.png" alt="Seta de suspensão" class="arrow-faq"></button>
+                <div class="faq-question">
+                    <p class="paragraph">Pergunta nº</p>
+                    <button class="faq-arrow"><i class="ri-arrow-down-double-fill"></i></button>
+                </div>
+                <div class="faq-answer">
+                    <p class="paragraph">Resposta</p>
+                </div>
             </li>
             
             <li class="faq-item">
-                <p class="paragraph">Pergunta nº</p>
-                <button><img src="https://i.imgur.com/lr1ieb0.png" alt="Seta de suspensão" class="arrow-faq"></button>
+                <div class="faq-question">
+                    <p class="paragraph">Pergunta nº</p>
+                    <button class="faq-arrow"><i class="ri-arrow-down-double-fill"></i></button>
+                </div>
+                <div class="faq-answer">
+                    <p class="paragraph">Resposta</p>
+                </div>
             </li>
         </ul>
     </section>
 
     <div id="final"></div>
-
 
     <footer class="footer">
         <div class="footer-links">
@@ -623,6 +647,51 @@
             const pageFooter = document.querySelector(".page-footer")
            pageFooter.remove();
         });
+    </script>
+
+    <script>
+        // Constants
+        const FAQ_ARROW_SELECTOR = '.faq-arrow';
+        const FAQ_ITEM_SELECTOR = '.faq-item';
+        const FAQ_ANSWER_SELECTOR = '.faq-answer';
+        const OPENED_CLASS = 'opened';
+
+        // Get all FAQ arrows
+        const faqArrows = document.querySelectorAll(FAQ_ARROW_SELECTOR);
+
+        // Add event listener to each FAQ arrow
+        faqArrows.forEach(faqArrow => {
+        faqArrow.addEventListener('click', () => {
+            // Get the closest FAQ item
+            const faqItem = faqArrow.closest(FAQ_ITEM_SELECTOR);
+
+            // Close all other FAQ items
+            closeAllOtherFaqItems(faqItem);
+
+            // Toggle the clicked FAQ item
+            toggleFaqItem(faqItem);
+        });
+        });
+
+        // Close all other FAQ items except the given one
+        function closeAllOtherFaqItems(exceptFaqItem) {
+        document.querySelectorAll(FAQ_ITEM_SELECTOR).forEach(faqItem => {
+            if (faqItem!== exceptFaqItem) {
+            faqItem.classList.remove(OPENED_CLASS);
+            const faqAnswer = faqItem.querySelector(FAQ_ANSWER_SELECTOR);
+            faqAnswer.style.height = '0px';
+            faqAnswer.style.opacity = 0;
+            }
+        });
+        }
+
+        // Toggle the FAQ item
+        function toggleFaqItem(faqItem) {
+        faqItem.classList.toggle(OPENED_CLASS);
+        const faqAnswer = faqItem.querySelector(FAQ_ANSWER_SELECTOR);
+        faqAnswer.style.height = faqItem.classList.contains(OPENED_CLASS)? faqAnswer.scrollHeight + 'px' : '0px';
+        faqAnswer.style.opacity = faqItem.classList.contains(OPENED_CLASS)? 1 : 0;
+        }
     </script>
 
 </body>
