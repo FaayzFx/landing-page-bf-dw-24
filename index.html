@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
     <title>Landing Page - Estudo</title>
 
 </head>
@@ -415,6 +416,77 @@
 
     <div id="final"></div>
 
+
+    <footer class="footer">
+        <div class="footer-links">
+            <div class="widget">
+                <p class="heading-2">Institucional</p>
+                <ul class="footer-links-list">
+                    <li class="nav-footer"><a href="https://www.wilsonatacado.com.br/sobre-nos">Quem Somos</a></li>
+                    <li class="nav-footer"><a href="https://www.wilsonatacado.com.br/termos-condicao">Politicas da empresa</a></li>
+                    <li class="nav-footer"><a href="https://www.wilsonatacado.com.br/termos-gerais">Termos de Uso</a></li>
+                    <li class="nav-footer"><a href="https://www.wilsonatacado.com.br/fretegratis">FRETE GRÁTIS - Condições</a></li>
+                </ul>
+            </div>
+
+            <div class="widget">
+                <p class="heading-2">Ajuda</p>
+                <ul class="footer-links-list">
+                    <li class="nav-footer"><a href="https://www.wilsonatacado.com.br/como-comprar">Como comprar</a></li>
+                    <li class="nav-footer"><a href="https://www.wilsonatacado.com.br/como-funciona">Como funciona</a></li>
+                    <li class="nav-footer"><a href="https://www.wilsonatacado.com.br/formas-pagamento">Pagamento</a></li>
+                    <li class="nav-footer"><a href="https://www.wilsonatacado.com.br/trocas-devolucoes">Trocas e Devoluções</a></li>
+                    <li class="nav-footer"><a href="https://www.wilsonatacado.com.br/politica-privacidade">Politicas de privacidade</a></li>
+                    <li class="nav-footer"><a href="https://www.wilsonatacado.com.br/politica-seguranca">Politicas de segurança</a></li>
+                    <li class="nav-footer"><a href="https://www.wilsonatacado.com.br/entregas">Politicas de entrega</a></li>
+                </ul>
+            </div>
+
+            <div class="widget">
+                <p class="heading-2">Minha Conta</p>
+                <ul class="footer-links-list">
+                    <li><a href="https://www.wilsonatacado.com.br/sales/order/history/" rel="nofollow">Meus Pedidos</a></li>
+                    <li><a href="https://www.wilsonatacado.com.br/customer/address/" rel="nofollow">Endereço de entrega</a></li>
+                    <li><a href="https://www.wilsonatacado.com.br/customer/account/edit/changepass/1/" rel="nofollow">Alterar Senha</a></li>
+                    <li><a href="https://www.wilsonatacado.com.br/customer/account/edit/" rel="nofollow">Alterar Dados Cadastrais</a></li>
+                    <li><a href="https://www.wilsonatacado.com.br/customer/account/" rel="nofollow">Meus favoritos</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social-media">
+            <p class="heading-2">Redes Sociais</p>
+            <ul class="footer-links-list flex">
+                <li><a rel="nofollow" href="https://facebook.com/wilsonatacadista" target="_blank"><i class="ri-facebook-circle-fill"></i></a></li>
+                <li><a rel="nofollow" href="https://www.instagram.com/wilsonatacado/" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+                <li><a rel="nofollow" href="https://www.youtube.com/c/WilsonAtacadoHavaianas" target="_blank"><i class="ri-youtube-fill"></i></a></li>
+                <li><a rel="nofollow" href="https://www.linkedin.com/company/distribuidora-wilson/mycompany/?viewAsMember=true." target="_blank"><i class="ri-linkedin-box-fill"></i></a></li>
+                <li><a rel="nofollow" href="https://doutorvarejo.com/" target="_blank"><i class="ri-blogger-fill"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <a href="https://www.wilsonatacado.com.br/contact" class="footer-contact-link"><i class="ri-message-3-fill"></i>Entre em contato</a>
+            <ul class="footer-links-list row">
+                <li class="nav-footer"><i class="ri-phone-fill"></i>(11) 3018-1515</li>
+                <li class="nav-footer"> <i class="ri-whatsapp-fill"></i>(11) 98595-1795</li>
+                <li class="nav-footer"><i class="ri-mail-send-fill"></i>relacionamento@wilsonatacado.com.br</li>
+                <li class="nav-footer"><i class="ri-calendar-schedule-fill"></i>Atendimento: Segunda à Sexta das 7h às 17h</li>
+            </ul>
+        </div>
+
+        <div class="footer-about">
+            <p>Distribuidora Wilson de Calçados LTDA</p>
+            <div class="v-stroke-division"></div>
+            <p>CNPJ: 77.982.510/0001-36</p>
+            <div class="v-stroke-division"></div>
+            <p>CEP: 03050-010</p>
+            <div class="v-stroke-division"></div>
+            <p>Rua Cavalheiro, 286 - Brás, São Paulo-SP</p>
+        </div>
+    </footer>
+
+
     <script>
         // Defina a data e hora de término
         var countDownDate = new Date("Nov 1, 2024 00:00:00").getTime();
@@ -535,6 +607,22 @@
         }
         })();
 
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const maincontent = document.querySelector("#maincontent");
+            maincontent.style.maxWidth = "100%";
+        
+            const pageHeader = document.querySelector(".page-header")
+            pageHeader.remove();
+
+            const footerTop = document.querySelector(".footer-top")
+            footerTop.remove();
+
+            const pageFooter = document.querySelector(".page-footer")
+           pageFooter.remove();
+        });
     </script>
 
 </body>
