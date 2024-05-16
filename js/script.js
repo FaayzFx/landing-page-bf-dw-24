@@ -1,3 +1,31 @@
+        // Defina a data e hora de término
+        var countDownDate = new Date("Nov 1, 2024 00:00:00").getTime();
+        // Atualize a contagem regressiva a cada 1 segundo
+        var countdownfunction = setInterval(function () {
+            // Obtenha a data e hora atuais
+            var now = new Date().getTime();
+            // Encontre a distância entre agora e a data de término
+            var distance = countDownDate - now;
+            // Cálculos de tempo para dias, horas, minutos e segundos
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Exiba o resultado nos elementos correspondentes
+            document.getElementById("day").innerHTML = days;
+            document.getElementById("hrs").innerHTML = hours;
+            document.getElementById("min").innerHTML = minutes;
+            document.getElementById("seg").innerHTML = seconds;
+            // Se a contagem regressiva terminar, escreva algum texto
+            if (distance < 0) {
+                clearInterval(countdownfunction);
+                document.getElementById("day").innerHTML = "";
+                document.getElementById("hrs").innerHTML = "";
+                document.getElementById("min").innerHTML = "";
+                document.getElementById("seg").innerHTML = "EXPIRADO";
+            }
+        }, 1000);
+
 
 
         // Get the slider container and boxes
@@ -46,8 +74,6 @@
 
     
 
-    
-
         (function() {
         // Get all elements with the class "parallax"
         const elems = document.querySelectorAll(".parallax");
@@ -82,7 +108,6 @@
         })();
 
     
-
     
         document.addEventListener("DOMContentLoaded", () => {
             const maincontent = document.querySelector("#maincontent");
