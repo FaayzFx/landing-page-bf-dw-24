@@ -1,0 +1,112 @@
+@media screen and (max-width:425px) {
+
+    .info-section,.categories,.brands,.conditions,.tips,.blog,.faq {
+        width: 100%;
+        max-width: var(--margin--mobile);
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        gap: 75px 0;
+        padding: 75px 0;
+    }
+
+    .nav-bar-content {
+        max-width: var(--margin--mobile);
+    }
+
+    .nav-bar-content-links {
+        display: none;
+    }
+
+    .nav-bar-menu-mobile {
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .nav-bar-menu-mobile i {
+        color: var(--cor-terciaria);
+        font-size: 2rem;
+
+    }
+
+    /* Add styles to hide the dropdown menu by default */
+    .nav-bar-menu-mobile-dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+    
+    /* Add styles to show the dropdown menu on button click */
+    .nav-bar-menu-mobile:focus +.nav-bar-menu-mobile-dropdown {
+        display: block;
+    }
+
+    .footer {
+        gap: 3rem 0;
+    }
+
+    .footer-links,.footer-contact,.footer-social-media,.footer-about {
+        max-width: var(--margin--mobile);
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-links {
+        justify-content: flex-start;
+        gap: 3rem;
+    }
+
+    .footer-contact {
+        justify-content: center;
+    }
+
+    .footer-contact-link i {
+        display: none;
+    }
+
+    .widget {
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .widget .heading-2 {
+        text-align: center;
+    }
+
+    .nav-footer a {
+        text-align: center;
+    }
+
+    .footer-links-list.row {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        gap: 1rem;
+    }
+
+    .footer-links-list.row i {
+        font-size: 1.5rem;
+    }
+
+    .footer-social-media {
+        gap: 1rem 0;
+    }
+
+    .footer-links-list.flex {
+        gap: 0 10%;
+        width: 100%;
+    }
+    
+}
