@@ -1,10 +1,10 @@
 a:visited, .alink:visited {
-    color: 0;
+    color: unset;
     text-decoration: none;
 }
 
 a:hover, .alink:hover {
-    color: 0;
+    color: unset;
     text-decoration: none;
 }
 
@@ -28,7 +28,7 @@ button {
 button:hover {
     background: none;
     border: none;
-    color: none;
+    color: unset;
 }
 
 .columns .column.main {
