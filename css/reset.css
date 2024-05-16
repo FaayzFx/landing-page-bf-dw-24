@@ -29,3 +29,7 @@ button:hover {
 .float-bottom-right {
 	display: none;
 }
+
+.float.float-bottom-right.float-floating {
+	display: none;
+}
