@@ -1,3 +1,18 @@
+        const mobileMenuButton = document.querySelector('.nav-bar-menu-mobile');
+        const mobileMenuDropdown = document.querySelector('.nav-bar-menu-mobile-dropdown');
+
+        mobileMenuButton.addEventListener('click', () => {
+        mobileMenuDropdown.classList.toggle('show');
+        });
+
+        document.addEventListener('click', (e) => {
+        if (!e.target.closest('.nav-bar-menu-mobile-dropdown') && !e.target.closest('.nav-bar-menu-mobile')) {
+            mobileMenuDropdown.classList.remove('show');
+        }
+        });
+
+        
+        
         // Defina a data e hora de término
         var countDownDate = new Date("Nov 1, 2024 00:00:00").getTime();
         // Atualize a contagem regressiva a cada 1 segundo

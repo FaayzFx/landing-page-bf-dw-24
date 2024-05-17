@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wilsonatacado/landing-page-bf-dw-24@ignore/css/reset.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wilsonatacado/landing-page-bf-dw-24@ignore/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wilsonatacado/landing-page-bf-dw-24@ignore/css/mobile.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wilsonatacado/landing-page-bf-dw-24@ignore/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wilsonatacado/landing-page-bf-dw-24@ignore/css/mobile.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" href="css/tablet.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/wilsonatacado/landing-page-bf-dw-24@main/js/script.js"></script>
-    <title>Landing Page - Estudo</title>
+
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/wilsonatacado/landing-page-bf-dw-24@main/js/script.js"></script> -->
+    <script type="module" src="js/script.js"></script>
+    <title>Black Friday 2024 - Distribuidora Wilson</title>
 
 </head>
 
@@ -26,14 +29,15 @@
                 <a class="links-nav" href="https://www.wilsonatacado.com.br/contact">Contato</a>
                 <a class="links-nav-box" href="#final">Compre Agora</a>
             </div>
-<button class="nav-bar-menu-mobile">
-  <i class="ri-menu-line"></i>
-  <ul class="nav-bar-menu-mobile-dropdown">
-    <li><a class="links-nav" href="https://www.wilsonatacado.com.br/">Loja</a></li>
-    <li><a class="links-nav" href="https://www.wilsonatacado.com.br/sobre-nos">Quem somos</a></li>
-    <li><a class="links-nav" href="https://www.wilsonatacado.com.br/contact">Contato</a></li>
-  </ul>
-</button>
+            <button class="nav-bar-menu-mobile">
+                <i class="ri-menu-line"></i>
+                <ul class="nav-bar-menu-mobile-dropdown">
+                    <li><i class="ri-arrow-go-back-line"></i></li>
+                    <li><a class="links-nav" href="https://www.wilsonatacado.com.br/">Loja</a></li>
+                    <li><a class="links-nav" href="https://www.wilsonatacado.com.br/sobre-nos">Quem somos</a></li>
+                    <li><a class="links-nav" href="https://www.wilsonatacado.com.br/contact">Contato</a></li>
+                </ul>
+            </button>
         </nav>
     </header>
 
@@ -509,6 +513,22 @@
             <p>Rua Cavalheiro, 286 - Brás, São Paulo-SP</p>
         </div>
     </footer>
+
+    <script>
+        // Seleciona as tags <link> pelos seus hrefs
+        var linkTag1 = document.querySelector('link[href="https://www.wilsonatacado.com.br/static/version1715868176/frontend/bistwobis/wilson-atacado/pt_BR/css/styles-l.css"]');
+        var linkTag2 = document.querySelector('link[href="https://www.wilsonatacado.com.br/static/version1715868176/frontend/bistwobis/wilson-atacado/pt_BR/css/styles-m.css"]');
+
+        // Remove as tags <link> do cabeçalho (head)
+        if (linkTag1) {
+            linkTag1.parentNode.removeChild(linkTag1);
+        }
+
+        if (linkTag2) {
+            linkTag2.parentNode.removeChild(linkTag2);
+        }
+
+    </script>
 
 </body>
 
