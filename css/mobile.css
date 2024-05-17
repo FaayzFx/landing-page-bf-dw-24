@@ -22,7 +22,8 @@
         z-index: 9000;
         width: 100vw;
         position: fixed;
-        padding: 2rem 0;
+        padding: 1.5rem 0;
+        background-color: rgba(0,0,0,.5);
         backdrop-filter: unset;
     }
 
@@ -91,8 +92,7 @@
     }
 
     .nav-bar-menu-mobile-dropdown li:nth-child(1) {
-        height: 7rem;
-        background-color: rgba(0,0,0,.75);
+        height: 6.5rem;
 
     }
     
@@ -114,10 +114,15 @@
 
 
 
+    .banner-home {
+        gap: 0;
+    }
+
     .home-content {
+        padding-top: 6rem;
         max-width: var(--margin--mobile);
         flex-direction: column-reverse;
-        padding: 7rem 0 2rem 0;
+        justify-content: flex-end;
         align-items: center;
         gap: 3rem 0;
     }
@@ -173,6 +178,20 @@
 
     .paragraph-1 {
         font-size: 1rem;
+    }
+
+
+
+    /* Info */
+
+
+
+    .info-box-01,.info-box-02,.info-box-03 {
+        flex-direction: column-reverse;
+    }
+
+    .render-02 {
+        width: 15rem;
     }
 
 

@@ -11,7 +11,7 @@
         }
         });
 
-        
+
         
         // Defina a data e hora de término
         var countDownDate = new Date("Nov 1, 2024 00:00:00").getTime();
@@ -41,7 +41,7 @@
             }
         }, 1000);
 
-
+        
 
         // Get the slider container and boxes
         const sliderCont = document.querySelector('.slider-cont');
