@@ -101,7 +101,7 @@ ul {
 
 .nav-bar {
     width: 100%;
-    padding: 3remr 0;
+    padding: 3rem 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -410,8 +410,9 @@ ul {
 
 .case-promo-cta-box {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    gap: 1.5rem;
+    gap: 1.5rem 0;
 
 }
 
