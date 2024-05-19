@@ -86,7 +86,6 @@
             sliderBox.style.transform = `translateX(${(i - activeBox) * 125}%)`;
         });
         }
-
     
 
         (function() {

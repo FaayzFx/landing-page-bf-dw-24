@@ -10,7 +10,7 @@
         justify-content: center;
         align-items: stretch;
         gap: 3rem 0;
-        padding: 1.5rem 0;
+        padding: 3rem 0;
     }
 
 
@@ -266,6 +266,84 @@
     .case-promo:hover {
         -webkit-transform: scale(1.05);
         transform: 1.05;
+    }
+
+
+
+    /* Marcas */
+
+
+
+    .slider-cont {
+        display: none;
+    }
+
+
+
+    /* Condições */
+
+
+
+    .conditions-cont {
+        flex-wrap: wrap;
+        gap: 3rem 0; 
+    }
+
+    .conditions-box {
+        width: 45%;
+        height: 13.5rem;
+    }
+
+    .conditions-box-info {
+        gap: 1rem;
+    }
+
+    .conditions-icon {
+        height: 4rem;
+    }
+
+    .conditions-box-info .heading-2 {
+        font-size: 1rem;
+    }
+
+    .conditions-box-info .paragraph-1 {
+        font-size: 0.8rem;
+    }
+
+    .conditions-link {
+        font-size: 0.8rem;
+    }
+
+
+
+    /* Tips */
+
+
+
+    .tips {
+        gap: 2rem;
+    }
+
+
+    .tips .paragraph {
+        font-size: 1.25rem;
+    }
+
+    .tips-cont {
+        position: relative;
+        gap: 1rem;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        flex-direction: row;
+        width: 100%;
+        height: 30rem;
+        overflow: hidden;
+    }
+
+    .tips-box {
+        left: 0;
+        position: absolute;
+        margin: 0 4rem;
     }
 
 
