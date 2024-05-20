@@ -632,6 +632,12 @@ ul {
 
 
 
+.tips-slider-cont {
+    display: none;
+}
+
+
+
 .tips .paragraph {
     font-size: 2rem;
     text-align: center;

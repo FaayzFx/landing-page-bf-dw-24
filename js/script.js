@@ -181,4 +181,8 @@
         faqAnswer.style.height = faqItem.classList.contains(OPENED_CLASS)? faqAnswer.scrollHeight + 'px' : '0px';
         faqAnswer.style.opacity = faqItem.classList.contains(OPENED_CLASS)? 1 : 0;
         }
+
+
+        // Slider Mobile
+
     
