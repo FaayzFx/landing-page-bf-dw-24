@@ -227,7 +227,6 @@
 
     .categories swiper-container {
         width: 100%;
-        height: 100%;
     }
 
     .categories swiper-slide {
@@ -252,6 +251,7 @@
         flex-direction: row;
         position: relative;
         gap: 2rem 0;
+        height: 42rem;
     }
 
     .case-slider {
@@ -299,9 +299,17 @@
     }
 
 
+    .categories ::part(pagination) {
+        bottom: 0;
+    }
 
-    .swiper-pagination-bullet-active {
-        background: var(--cor-secundaria) !important;
+    .categories ::part(bullet) {
+        opacity: var(--swiper-pagination-bullet-opacity, 1);
+        background: var(--cor-terciaria);
+    }
+    .categories ::part(bullet-active) {
+        opacity: var(--swiper-pagination-bullet-opacity, 1);
+        background: var(--cor-secundaria);
     }
 
 
@@ -309,7 +317,9 @@
     /* Marcas */
 
 
-
+    .slider-cont {
+        display: none;
+    }
 
 
 
@@ -445,6 +455,52 @@
     }
      
 
+
+    /* Blog */
+
+
+    .content-blog {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem 0;
+
+    }
+
+    .content-blog-info {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        gap: 2rem 0;
+    }
+
+    .content-blog .cta-box {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+    }
+
+
+
+    /* Faq */
+
+
+
+    .faq-item {
+        padding: 1.5rem 1rem 1.5rem 1.5rem;
+    }
+
+    .faq-item.opened {
+        gap: 1rem 0;
+    }
+
+    .faq-item .paragraph {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+    .faq-answer .paragraph {
+        font-size: 1.15rem;
+        font-weight: 200;
+    }
 
 
     /* Footer */

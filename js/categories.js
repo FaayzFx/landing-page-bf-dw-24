@@ -34,7 +34,7 @@ const promoSliderCont = document.getElementById("promo-slider-cont");
   ];
 
   const casePromoSlider = `
-  <swiper-container class="promo-slider-cont" slides-per-view="auto" centered-slides="true" grab-cursor="true" slide-to-clicked-slide="true" pagination="true" pagination-clickable="true">
+  <swiper-container class="promo-slider-cont" slides-per-view="auto" centered-slides="true" grab-cursor="true" slide-to-clicked-slide="true" pagination="true" pagination-clickable="true" loop="true">
     ${categories
       .map(
         category => `
