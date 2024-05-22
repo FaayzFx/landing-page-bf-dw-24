@@ -449,6 +449,12 @@ ul {
 
 
 
+.brands-mobile {
+    display: none;
+}
+
+
+
 .brands {
     max-width: 100%;
 }

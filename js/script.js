@@ -1,13 +1,19 @@
         const mobileMenuButton = document.querySelector('.nav-bar-menu-mobile');
         const mobileMenuDropdown = document.querySelector('.nav-bar-menu-mobile-dropdown');
+        const menuFadeBg = document.createElement('div');
+
+        menuFadeBg.classList.add('menu-fade-bg');
+        mobileMenuButton.appendChild(menuFadeBg);
 
         mobileMenuButton.addEventListener('click', () => {
         mobileMenuDropdown.classList.toggle('show');
+        menuFadeBg.classList.toggle('show');
         });
 
         document.addEventListener('click', (e) => {
         if (!e.target.closest('.nav-bar-menu-mobile-dropdown') && !e.target.closest('.nav-bar-menu-mobile')) {
             mobileMenuDropdown.classList.remove('show');
+            menuFadeBg.classList.remove('show');
         }
         });
 
