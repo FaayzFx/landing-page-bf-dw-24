@@ -66,7 +66,7 @@ body {
     --fonte-heading-2: 'Monument Regular', sans-serif;
     --fonte-paragraph: 'Outfit', sans-serif;
     --margin--zero: 64rem;
-    --margin--tablet: 75%;
+    --margin--tablet: 60%;
     --margin--mobile: 80%;
 }
 
@@ -106,7 +106,7 @@ ul {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 10;
     box-sizing: border-box;
     backdrop-filter: blur(.25rem);
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
@@ -328,6 +328,10 @@ ul {
 /* Categorias */
 
 
+
+.promo-slider-cont {
+    display: none;
+}
 
 .cont-promo {
     width: 100%;
@@ -818,14 +822,23 @@ ul {
     gap: 5rem 0;
 }
 
-.footer-links,.footer-contact,.footer-social-media,.footer-about {
-    width: var(--margin--zero);
+.footer-contact,.footer-social-media,.footer-about {
+    max-width: var(--margin--zero);
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: var(--margin--zero);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .widget {
@@ -946,5 +959,13 @@ ul {
     height: 0.8rem;
 }
 
-
+@media screen and (max-height:780px) {
+    main {
+        height: 680px;
+    }
+    
+    .nav-bar {
+        padding: 1.5rem 0;
+    }
+}
 
