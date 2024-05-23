@@ -40,7 +40,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
-    /* perspective: 5px; */
     overflow-x: hidden;
 }
 

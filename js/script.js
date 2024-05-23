@@ -141,6 +141,9 @@
 
             const pageFooter = document.querySelector(".page-footer")
            pageFooter.remove();
+
+           const modalPopUp = document.querySelector(".modal-popup")
+           modalPopUp.remove();
         });
     
 
