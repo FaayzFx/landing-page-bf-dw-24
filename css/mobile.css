@@ -3,7 +3,7 @@
 
     body {
         background-color: var(--cor-primaria);
-        background-image: url(https://i.imgur.com/zfPSmMt.png);
+        background-image: url(https://i.imgur.com/zfPSmMt.png) !important;
         background-repeat: no-repeat;
         background-size: cover;
         z-index: -1;

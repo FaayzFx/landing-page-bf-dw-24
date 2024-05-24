@@ -144,6 +144,13 @@
 
            const modalPopUp = document.querySelector(".modal-popup")
            modalPopUp.remove();
+
+           const modalWrapper = document.querySelector(".modals-wrapper")
+           modalWrapper.remove();
+
+           const amWishList = document.querySelector(".amwishlist-popup-block")
+           amWishList.remove();
+           
         });
     
 
